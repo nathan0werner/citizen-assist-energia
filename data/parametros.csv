@@ -1,0 +1,27 @@
+parametro,valor,unidade,descricao,tipo,fontes,nota
+potencia_inverno_w,5500,W,Potência do chuveiro elétrico na posição inverno (quente),ESTIMADO,INMETRO_PBE_CHUVEIRO,Valor comum de mercado (faixa típica 4.500–7.500 W). O usuário pode informar a potência da etiqueta.
+potencia_verao_w,3200,W,Potência do mesmo chuveiro na posição verão (morno),ESTIMADO,INMETRO_PBE_CHUVEIRO,Aproximação para chuveiros de 5.500 W; varia por modelo.
+vazao_l_min,3.0,L/min,Vazão de água de um chuveiro elétrico em uso,ESTIMADO,INMETRO_PBE_CHUVEIRO,Chuveiros elétricos operam tipicamente entre 3 e 5 L/min.
+pessoas,4,pessoas,Moradores da residência de referência,ESTIMADO,IBGE_CENSO,"Arredondamento para cima do tamanho médio do domicílio (~2,8–3 pessoas) para representar famílias com filhos."
+minutos_banho,8,min/pessoa/dia,Duração do banho no cenário atual,ESTIMADO,PROCEL_PPH,Premissa da equipe; o usuário informa a sua.
+minutos_banho_meta,5,min/pessoa/dia,Duração do banho proposta na alternativa de hábitos,ESTIMADO,SABESP_USO_RACIONAL,Meta de uso racional adotada pela equipe.
+meses_verao,6,meses/ano,Meses em que é possível usar a posição verão,ESTIMADO,INMET_CLIMA_SP,Out–mar em São Paulo; premissa da equipe.
+dias_mes,30,dias,Dias por mês usados nos cálculos,ESTIMADO,,Convenção de cálculo.
+consumo_total_kwh_mes,220,kWh/mês,Consumo total da residência de referência,ESTIMADO,EPE_ANUARIO;PROCEL_PPH,"Família com chuveiro elétrico consome mais que a média residencial nacional (~170 kWh/mês, EPE)."
+tarifa_kwh,0.95,R$/kWh,"Tarifa final estimada (com tributos) – residencial B1, Enel SP, 2026",ESTIMADO,ANEEL_TARIFAS;EXAME_ENEL_2025;ENEL_REAJUSTE_2026,"R$ 725,18/MWh (B1, 2025) × 1,0902 (reajuste residencial 2026) ≈ R$ 0,79/kWh sem tributos; ÷ (1 − 12% ICMS − ~5% PIS/COFINS) ≈ R$ 0,95/kWh. Use o valor da sua conta: total ÷ kWh."
+gratuidade_tarifa_social_kwh,80,kWh/mês,"Consumo isento para famílias da Tarifa Social (CadÚnico, renda ≤ ½ salário mínimo per capita)",PUBLICADO,LEI_15235_2025;ANEEL_TSEE_2025,Consumo acima de 80 kWh é cobrado sem desconto.
+custo_disponibilidade_kwh,50,kWh/mês,Consumo mínimo faturado (ligação bifásica). Monofásica = 30; trifásica = 100.,PUBLICADO,ANEEL_REN_1000,
+fracao_solar,0.7,fração,Parcela da energia do banho fornecida pelo sol (aquecedor solar em São Paulo),ESTIMADO,ABNT_NBR_15569;INMETRO_PBE_SOLAR;CRESESB_SUNDATA,Sistemas bem dimensionados ficam tipicamente entre 60% e 80%; o restante vem da resistência elétrica de apoio.
+custo_aquecedor_solar,3500,R$,Kit aquecedor solar 200 L (2 m² de coletor) instalado,ESTIMADO,PESQUISA_PRECOS_EQUIPE,Faixa pesquisada R$ 2.500 a R$ 5.000; depende do telhado e da hidráulica.
+vida_util_aquecedor_anos,15,anos,Vida útil do aquecedor solar,ESTIMADO,INMETRO_PBE_SOLAR,
+manutencao_aquecedor_ano,100,R$/ano,Limpeza de coletores / revisão,ESTIMADO,PESQUISA_PRECOS_EQUIPE,
+irradiacao_kwh_m2_dia,4.6,kWh/m²/dia,Irradiação média diária no plano inclinado – São Paulo,PUBLICADO,CRESESB_SUNDATA;ATLAS_SOLAR_2017,Média anual; no inverno é menor.
+performance_ratio,0.75,fração,"Rendimento global do sistema FV (perdas, temperatura, inversor)",ESTIMADO,CRESESB_MANUAL_FV,"Valores típicos 0,70–0,80."
+potencia_modulo_kwp,0.55,kWp,Potência de um módulo comercial,ESTIMADO,PESQUISA_PRECOS_EQUIPE,
+custo_fv_r_kwp,4000,R$/kWp,Custo instalado de sistema FV residencial pequeno,ESTIMADO,GREENER_ESTUDO_GD,Sistemas pequenos custam mais por kWp que os grandes.
+fracao_fio_b_tarifa,0.25,fração,Participação aproximada do Fio B na tarifa final,ESTIMADO,ANEEL_TARIFAS,
+percentual_fio_b_2026,0.6,fração,Parcela do Fio B cobrada sobre energia compensada em 2026 (sistemas novos),PUBLICADO,LEI_14300_2022,
+vida_util_fv_anos,25,anos,Vida útil dos módulos FV,ESTIMADO,CRESESB_MANUAL_FV,Inversor costuma ser trocado uma vez nesse período (~10–12 anos).
+manutencao_fv_ano,100,R$/ano,Limpeza / inspeção do sistema FV,ESTIMADO,PESQUISA_PRECOS_EQUIPE,
+fator_emissao_kg_kwh,0.0385,kgCO2/kWh,Fator médio de emissão do Sistema Interligado Nacional (2023),PUBLICADO,MCTI_FATOR_EMISSAO,"Valores mensais de 2025 (nova base de cálculo) são menores, ex.: 0,0289 em abr/2025."
+calor_especifico_agua,4186,J/(kg·°C),Calor específico da água,PUBLICADO,FISICA_BASICA,

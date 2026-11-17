@@ -1,0 +1,11 @@
+cenario,codigo,alternativa,renovavel,kwh_chuveiro_mes,kwh_total_mes,conta_r_mes,economia_kwh_mes,economia_r_mes,economia_r_ano,investimento_r,manutencao_r_ano,payback_anos,saldo_10_anos_r,co2_evitado_kg_ano,demanda_pico_kw,agua_l_mes
+tarifa_cheia,A0,Situação atual (chuveiro elétrico),não,88.0,220,209.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.5,2880
+tarifa_cheia,A1,Hábitos: banho de 5 min + posição verão 6 meses/ano,não,43.5,175.5,166.72,44.5,42.28,507.3,0.0,0.0,0.0,5073.0,20.6,4.35,1800
+tarifa_cheia,A2,Aquecedor solar térmico (200 L) com apoio elétrico,sim,26.4,158.4,150.48,61.6,58.52,702.24,3500,100,5.81,2522.4,28.5,1.65,2880
+tarifa_cheia,A3,"Fotovoltaico on-grid: 2 módulo(s) (1,10 kWp)",sim,88.0,220,137.94,88.0,71.06,852.72,4400.0,100,5.85,3127.2,40.7,5.5,2880
+tarifa_cheia,A4,Combinação: hábitos (A1) + aquecedor solar (A2),sim,13.1,145.1,137.8,74.9,71.2,854.43,3500,100,4.64,4044.3,34.6,1.31,1800
+tarifa_social,A0,Situação atual (chuveiro elétrico),não,88.0,220,133.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.5,2880
+tarifa_social,A1,Hábitos: banho de 5 min + posição verão 6 meses/ano,não,43.5,175.5,90.72,44.5,42.28,507.3,0.0,0.0,0.0,5073.0,20.6,4.35,1800
+tarifa_social,A2,Aquecedor solar térmico (200 L) com apoio elétrico,sim,26.4,158.4,74.48,61.6,58.52,702.24,3500,100,5.81,2522.4,28.5,1.65,2880
+tarifa_social,A3,"Fotovoltaico on-grid: 2 módulo(s) (1,10 kWp)",sim,88.0,220,61.94,88.0,71.06,852.72,4400.0,100,5.85,3127.2,40.7,5.5,2880
+tarifa_social,A4,Combinação: hábitos (A1) + aquecedor solar (A2),sim,13.1,145.1,61.8,74.9,71.2,854.43,3500,100,4.64,4044.3,34.6,1.31,1800

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Citizen Assist AI – Energia</title>
+<style>
+  :root { --bg:#f6f7f4; --card:#fff; --ink:#1d2a22; --muted:#5d6b62; --accent:#1f7a4d; --accent2:#e0a100; --line:#dfe5df; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#131a16; --card:#1c2520; --ink:#e7efe9; --muted:#9db0a4; --accent:#4cc38a; --accent2:#f0c040; --line:#2c3a32; } }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:20px 16px 8px; max-width:1100px; margin:auto; }
+  header h1 { margin:0; font-size:1.4rem; }
+  header p { margin:4px 0 0; color:var(--muted); }
+  main { max-width:1100px; margin:auto; padding:8px 16px 24px; display:grid; grid-template-columns: 1.3fr 1fr; gap:16px; }
+  @media (max-width: 800px) { main { grid-template-columns: 1fr; } }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; }
+  #chat { height:60vh; overflow-y:auto; display:flex; flex-direction:column; gap:10px; }
+  .msg { padding:10px 12px; border-radius:10px; white-space:pre-wrap; line-height:1.4; max-width:95%; overflow-wrap:anywhere; }
+  .eu { align-self:flex-end; background:var(--accent); color:#fff; }
+  .bot { align-self:flex-start; background:var(--bg); border:1px solid var(--line); }
+  form { display:flex; gap:8px; margin-top:10px; }
+  input { flex:1; padding:12px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--ink); font-size:1rem; }
+  button { padding:10px 14px; border:0; border-radius:8px; background:var(--accent); color:#fff; font-size:1rem; cursor:pointer; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .chips button { background:transparent; color:var(--accent); border:1px solid var(--accent); font-size:.85rem; padding:6px 10px; }
+  h2 { font-size:1rem; margin:0 0 10px; }
+  .bar { margin:8px 0; font-size:.85rem; }
+  .bar .track { background:var(--bg); border-radius:6px; height:14px; overflow:hidden; border:1px solid var(--line); }
+  .bar .fill { height:100%; background:var(--accent); }
+  .bar .fill.atual { background:var(--accent2); }
+  table { width:100%; border-collapse:collapse; font-size:.8rem; margin-top:12px; }
+  td, th { border-bottom:1px solid var(--line); padding:6px 4px; text-align:left; }
+  .nota { color:var(--muted); font-size:.75rem; margin-top:8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>💡 Citizen Assist AI · Energia no banho</h1>
+  <p>Orientações para reduzir o gasto com chuveiro elétrico — Soluções em Energias Renováveis e Sustentáveis</p>
+</header>
+<main>
+  <section class="card">
+    <div id="chat" aria-live="polite"></div>
+    <div class="chips">
+      <button data-m="Quanto gasta meu chuveiro?">Quanto gasta meu chuveiro?</button>
+      <button data-m="Dicas para economizar no banho">Dicas</button>
+      <button data-m="Vale a pena aquecedor solar?">Aquecedor solar</button>
+      <button data-m="E placa solar fotovoltaica?">Placa solar</button>
+      <button data-m="Compare as alternativas">Comparar</button>
+      <button data-m="Como funciona a tarifa social?">Tarifa social</button>
+      <button data-m="Limitações">Limitações</button>
+    </div>
+    <form id="f">
+      <label for="m" style="position:absolute;left:-9999px">Mensagem</label>
+      <input id="m" autocomplete="off" placeholder="Ex.: somos 3 pessoas, banho de 10 min, chuveiro 6800 W">
+      <button>Enviar</button>
+    </form>
+  </section>
+  <section class="card">
+    <h2>Energia do banho por mês (kWh)</h2>
+    <div id="barras"></div>
+    <table id="tab"></table>
+    <p class="nota">Valores estimados com as premissas da análise; não são garantia de economia. Atualiza conforme você informa seus dados.</p>
+  </section>
+</main>
+<script>
+const chat = document.getElementById('chat');
+let sessao = null;
+function md(t){ const e=document.createElement('div'); e.textContent=t; return e.innerHTML.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(https?:\/\/[^\s]+)/g,'<a href="$1" target="_blank" rel="noopener">link</a>'); }
+function add(t, quem){ const d=document.createElement('div'); d.className='msg '+quem; d.innerHTML=md(t); chat.appendChild(d); if(quem==='bot'){ chat.scrollTop=d.offsetTop-chat.offsetTop-8; } else { chat.scrollTop=chat.scrollHeight; } }
+const brl = x => x.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+function grafico(rows){
+  const max = Math.max(...rows.map(r=>r.kwh_chuveiro_mes), 1);
+  document.getElementById('barras').innerHTML = rows.filter(r=>r.codigo!=='A3').map(r=>`
+    <div class="bar">${r.codigo} · ${r.nome}${r.renovavel?' 🌱':''}<br><b>${r.kwh_chuveiro_mes.toLocaleString('pt-BR')} kWh</b>
+    <div class="track"><div class="fill ${r.codigo==='A0'?'atual':''}" style="width:${r.kwh_chuveiro_mes/max*100}%"></div></div></div>`).join('')
+    + '<p class="nota">A3 (fotovoltaico) não muda o consumo do chuveiro: gera energia que vira crédito na conta.</p>';
+  document.getElementById('tab').innerHTML = '<tr><th>Alt.</th><th>Economia/mês</th><th>Invest.</th><th>Payback</th><th>CO₂/ano</th></tr>' +
+    rows.filter(r=>r.codigo!=='A0').map(r=>`<tr><td>${r.codigo}</td><td>${brl(r.economia_r_mes)}</td><td>${brl(r.investimento)}</td><td>${r.payback_anos===null?'—':(r.payback_anos===0?'imediato':r.payback_anos.toLocaleString('pt-BR')+' anos')}</td><td>${r.co2_evitado_kg_ano.toLocaleString('pt-BR')} kg</td></tr>`).join('');
+}
+async function enviar(m){
+  if(!m.trim()) return; add(m,'eu');
+  try{
+    const r = await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessao, mensagem:m})});
+    const j = await r.json(); sessao=j.sessao; add(j.resposta,'bot'); grafico(j.comparacao);
+  }catch(e){ add('Não consegui falar com o servidor. Ele está rodando (python app_web.py)?','bot'); }
+}
+document.getElementById('f').onsubmit = e => { e.preventDefault(); const i=document.getElementById('m'); enviar(i.value); i.value=''; };
+document.querySelectorAll('.chips button').forEach(b => b.onclick = () => enviar(b.dataset.m));
+enviar('oi'); fetch('/api/comparacao').then(r=>r.json()).then(grafico);
+</script>
+</body>
+</html>
