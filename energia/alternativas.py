@@ -3,7 +3,7 @@ e o MESMO período de referência (mês e ano; horizonte de 10 anos para investi
 
 A0 – Situação atual (chuveiro elétrico sempre no inverno)
 A1 – Mudança de hábitos (banho mais curto + posição verão nos meses quentes)   [economia, custo zero]
-A2 – Aquecedor solar térmico com apoio elétrico                                 [fonte renovável]
+A2 – Aquecedor solar térmico 300 L com apoio elétrico                                 [fonte renovável]
 A3 – Sistema fotovoltaico conectado à rede (geração distribuída)                [fonte renovável]
 A4 – Combinação A1 + A2
 """
@@ -87,7 +87,7 @@ def comparar(perfil):
     # A2 – aquecedor solar ------------------------------------------------
     fs = v("fracao_solar")
     kwh_a2 = kwh_ch * (1 - fs)
-    a2 = Resultado("A2", "Aquecedor solar térmico (200 L) com apoio elétrico", True,
+    a2 = Resultado("A2", "Aquecedor solar térmico (300 L) com apoio elétrico", True,
                    kwh_a2, total(kwh_a2), c.conta_mensal(total(kwh_a2), perfil),
                    investimento=v("custo_aquecedor_solar"), manutencao_ano=v("manutencao_aquecedor_ano"),
                    demanda_pico_kw=pm_atual / 1000 * (1 - fs), agua_l_mes=agua_atual,
@@ -95,38 +95,43 @@ def comparar(perfil):
                                "instalação hidráulica de água quente. Muitas vezes possível via programas habitacionais "
                                "ou da distribuidora (Programa de Eficiência Energética da ANEEL).",
                    limitacoes=["Fração solar de 70% é estimativa; em dias nublados seguidos o apoio elétrico trabalha mais.",
-                               "Preço varia com o telhado e a hidráulica da casa.",
+                               "O preço usado é só do kit (anúncio): a instalação não está incluída, então o payback real é maior.",
                                "Não serve para quem mora de aluguel sem autorização do proprietário."],
                    fontes=("ABNT_NBR_15569", "INMETRO_PBE_SOLAR", "CRESESB_SUNDATA", "PESQUISA_PRECOS_EQUIPE"),
-                   detalhes={"fracao_solar": fs, "reservatorio_l": 200,
+                   detalhes={"fracao_solar": fs, "reservatorio_l": 300,
                              "agua_quente_dia_l": round(agua_atual / v("dias_mes"))})
     res["A2"] = _finalizar(a2, a0)
 
     # A3 – fotovoltaico ---------------------------------------------------
-    kwp, modulos = c.fv_dimensionar_kwp(kwh_ch)
+    # Usa o kit REAL pesquisado (não dá para comprar "meio kit" instalado pelo preço proporcional).
+    kwp_min, modulos_min = c.fv_dimensionar_kwp(kwh_ch)   # quanto bastaria só para o banho (informativo)
+    kwp = max(v("kit_fv_kwp"), kwp_min)
+    investimento_fv = v("kit_fv_preco") * kwp / v("kit_fv_kwp")
     ger = c.fv_geracao_kwh_mes(kwp)
     conta_fv, compensada = c.conta_com_fv(perfil, ger, limite_kwh=kwh_ch)
     lim_fv = ["Na comparação só entra a energia do banho; o excedente de geração (%.0f kWh/mês) vira crédito "
-              "para outros aparelhos e não foi contado." % max(0.0, ger - compensada),
+              "para outros aparelhos e não foi contado na comparação." % max(0.0, ger - compensada),
+              "Preço do kit pesquisado pela equipe; confirmar se a instalação e a homologação estão incluídas.",
               "Geração varia com a estação (menor no inverno) e com sombreamento.",
               "Regras de compensação (Lei 14.300/2022) mudam ano a ano: o Fio B cobrado sobe até 2029.",
               "O inversor costuma precisar de troca uma vez na vida útil (não incluído no saldo de 10 anos).",
               "Não reduz o pico das 18h–21h: gera de dia, enquanto o banho é à noite."]
-    viab = ("Baixa a média: maior investimento, exige telhado próprio e homologação na distribuidora. "
-            "Compensa mais quando o consumo total é alto.")
+    viab = ("Média: exige telhado próprio, sem sombra, e homologação na distribuidora. "
+            "O kit gera mais do que o banho precisa, então compensa mais quando o consumo total da casa é alto.")
     if perfil.tarifa_social:
         lim_fv.insert(0, "Para famílias com gratuidade da Tarifa Social, a interação com a compensação de créditos "
                          "não foi modelada; o cálculo usa a tarifa cheia e superestima a economia.")
         viab = "Baixa para quem já tem gratuidade da Tarifa Social: boa parte do consumo já é isenta."
         conta_base_cheia = c.conta_mensal(perfil.consumo_total_kwh_mes, perfil.copia(tarifa_social=False))
         conta_fv = max(0.0, conta_fv - conta_base_cheia + a0.conta_mes)  # economia calculada sobre a tarifa cheia
-    a3 = Resultado("A3", "Fotovoltaico on-grid: %d módulo(s) (%s kWp)" % (modulos, f"{kwp:.2f}".replace(".", ",")), True,
+    a3 = Resultado("A3", "Kit fotovoltaico on-grid %s kWp" % f"{kwp:.2f}".replace(".", ","), True,
                    kwh_ch, perfil.consumo_total_kwh_mes, conta_fv,
-                   investimento=kwp * v("custo_fv_r_kwp"), manutencao_ano=v("manutencao_fv_ano"),
+                   investimento=investimento_fv, manutencao_ano=v("manutencao_fv_ano"),
                    demanda_pico_kw=pm_atual / 1000, agua_l_mes=agua_atual,
                    viabilidade=viab, limitacoes=lim_fv,
-                   fontes=("CRESESB_SUNDATA", "CRESESB_MANUAL_FV", "LEI_14300_2022", "GREENER_ESTUDO_GD", "ANEEL_REN_1000"),
-                   detalhes={"kwp": kwp, "modulos": modulos, "geracao_kwh_mes": ger, "compensada_kwh_mes": compensada})
+                   fontes=("CRESESB_SUNDATA", "CRESESB_MANUAL_FV", "LEI_14300_2022", "ANUNCIO_FV_NEOSOLAR", "ANEEL_REN_1000"),
+                   detalhes={"kwp": kwp, "kwp_so_banho": kwp_min, "modulos_so_banho": modulos_min,
+                             "geracao_kwh_mes": ger, "compensada_kwh_mes": compensada})
     r3 = _finalizar(a3, a0)
     r3.economia_kwh_mes = compensada  # energia da rede evitada (compensada pela geração)
     r3.co2_evitado_kg_ano = c.co2_kg(compensada * 12)

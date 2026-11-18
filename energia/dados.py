@@ -66,8 +66,9 @@ P = {
         ("ABNT_NBR_15569", "INMETRO_PBE_SOLAR", "CRESESB_SUNDATA"), True,
         "Sistemas bem dimensionados ficam tipicamente entre 60% e 80%; o restante vem da resistência elétrica de apoio."),
     "custo_aquecedor_solar": Parametro(
-        3500, "R$", "Kit aquecedor solar 200 L (2 m² de coletor) instalado",
-        ("PESQUISA_PRECOS_EQUIPE",), True, "Faixa pesquisada R$ 2.500 a R$ 5.000; depende do telhado e da hidráulica."),
+        5624, "R$", "Kit aquecedor solar 300 L (nível) + 2 placas coletoras – preço do kit, sem instalação",
+        ("ANUNCIO_AQUECEDOR_ML",), False,
+        "Anúncio no Mercado Livre pesquisado pela equipe em 18/11/2026. Instalação não incluída: o custo real é maior."),
     "vida_util_aquecedor_anos": Parametro(15, "anos", "Vida útil do aquecedor solar", ("INMETRO_PBE_SOLAR",), True),
     "manutencao_aquecedor_ano": Parametro(100, "R$/ano", "Limpeza de coletores / revisão", ("PESQUISA_PRECOS_EQUIPE",), True),
     # ---------------- Fotovoltaico ----------------
@@ -77,8 +78,12 @@ P = {
     "performance_ratio": Parametro(0.75, "fração", "Rendimento global do sistema FV (perdas, temperatura, inversor)",
                                    ("CRESESB_MANUAL_FV",), True, "Valores típicos 0,70–0,80."),
     "potencia_modulo_kwp": Parametro(0.55, "kWp", "Potência de um módulo comercial", ("PESQUISA_PRECOS_EQUIPE",), True),
-    "custo_fv_r_kwp": Parametro(4000, "R$/kWp", "Custo instalado de sistema FV residencial pequeno",
-                                ("GREENER_ESTUDO_GD",), True, "Sistemas pequenos custam mais por kWp que os grandes."),
+    "kit_fv_kwp": Parametro(2.48, "kWp", "Potência do menor kit fotovoltaico on-grid pesquisado (microinversor)",
+                            ("ANUNCIO_FV_NEOSOLAR",), False),
+    "kit_fv_preco": Parametro(4159, "R$", "Preço do kit fotovoltaico 2,48 kWp com instalação, segundo a equipe",
+                              ("ANUNCIO_FV_NEOSOLAR",), False,
+                              "Anúncio Neosolar pesquisado pela equipe em 18/11/2026 (≈ R$ 1.677/kWp). "
+                              "Valor abaixo do usual para sistema instalado: confirmar se a instalação está mesmo incluída."),
     "fracao_fio_b_tarifa": Parametro(0.25, "fração", "Participação aproximada do Fio B na tarifa final",
                                      ("ANEEL_TARIFAS",), True),
     "percentual_fio_b_2026": Parametro(0.60, "fração", "Parcela do Fio B cobrada sobre energia compensada em 2026 (sistemas novos)",

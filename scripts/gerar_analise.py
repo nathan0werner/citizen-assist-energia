@@ -132,7 +132,7 @@ def main():
           tabela_md(pequena),
           "",
           "> Recomendação do código para este caso: " + " → ".join(recomendar(pequena, casa_equipe)) +
-          ". Com pouco uso de água quente, o aquecedor solar de 200 L não se paga dentro da vida útil (15 anos) e "
+          ". Com pouco uso de água quente, o aquecedor solar de 300 L não se paga dentro da vida útil (15 anos) e "
           "sai da recomendação.",
           "",
           "## Sensibilidade (payback em anos)",

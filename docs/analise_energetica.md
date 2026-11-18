@@ -44,10 +44,10 @@ A lista completa está em [`../data/parametros.csv`](../data/parametros.csv): va
 | Gratuidade da Tarifa Social | 80 kWh/mês | Publicado | Lei 15.235/2025 |
 | Custo de disponibilidade | 30 / 50 / 100 kWh | Publicado | ANEEL REN 1.000/2021 (mono/bi/trifásico) |
 | Fração solar do aquecedor | 70% | Estimado | Faixa típica de 60–80% para São Paulo (NBR 15569, PBE) |
-| Aquecedor solar 200 L instalado | R$ 3.500 | Estimado | Faixa de R$ 2.500 a R$ 5.000 (pesquisa da equipe, `data/pesquisa_precos.csv`) |
+| Aquecedor solar 300 L + 2 placas (kit, sem instalação) | R$ 5.624 | Publicado (anúncio) | Mercado Livre, consulta em 18/11/2026 (`data/pesquisa_precos.csv`) |
 | Irradiação em São Paulo | 4,6 kWh/m²/dia | Publicado | CRESESB SunData / Atlas Solar INPE 2017 |
 | Performance ratio do FV | 0,75 | Estimado | Faixa típica de 0,70–0,80 (Manual de Engenharia FV, CRESESB) |
-| Custo do FV | R$ 4.000/kWp | Estimado | Sistemas pequenos (Greener, estudo de GD) |
+| Kit FV on-grid 2,48 kWp com microinversor | R$ 4.159 (com instalação, segundo a equipe) | Publicado (anúncio) | Neosolar, consulta em 18/11/2026. ≈ R$ 1.677/kWp, abaixo do usual para sistema instalado: confirmar a instalação |
 | Fio B na tarifa / cobrado em 2026 | 25% / 60% | Estimado / Publicado | ANEEL; Lei 14.300/2022 |
 | Fator de emissão da rede | 0,0385 kgCO₂/kWh | Publicado | MCTI, média de 2023 |
 
@@ -64,8 +64,8 @@ também um **horizonte de 10 anos**.
 | Tempo de banho no mês | t = pessoas × min ÷ 60 × 30 | 4 × 8 ÷ 60 × 30 = 16 h |
 | Calor sensível | Q = m · c · ΔT  →  ΔT = P ÷ (ṁ · c) | 5.500 ÷ (0,05 kg/s × 4.186) ≈ **26 °C** de aquecimento |
 | Potência média (inverno/verão) | P̄ = (P_inv·meses_inv + P_ver·meses_ver) ÷ 12 | (5.500·6 + 3.200·6) ÷ 12 = 4.350 W |
-| Geração fotovoltaica | E = kWp × H × PR × 30 | 1,1 × 4,6 × 0,75 × 30 ≈ 114 kWh/mês |
-| Payback simples | invest. ÷ (economia anual − manutenção) | 3.500 ÷ (67,14 × 12 − 100) ≈ 5,0 anos |
+| Geração fotovoltaica | E = kWp × H × PR × 30 | 2,48 × 4,6 × 0,75 × 30 ≈ 257 kWh/mês |
+| Payback simples | invest. ÷ (economia anual − manutenção) | 5.624 ÷ (67,14 × 12 − 100) ≈ 8,0 anos |
 | Emissões evitadas | kWh evitados × fator de emissão | 44,5 × 12 × 0,0385 ≈ 20,6 kg/ano |
 
 A **eficiência energética** aparece de duas formas:
@@ -82,8 +82,8 @@ A **eficiência energética** aparece de duas formas:
 |---|---|---|
 | A0 | Situação atual: chuveiro elétrico sempre na posição inverno | Referência |
 | A1 | Hábitos: banho de 5 min + posição verão de out. a mar. | Economia, custo zero |
-| A2 | Aquecedor solar térmico 200 L com apoio elétrico | **Fonte renovável (solar térmica)** |
-| A3 | Sistema fotovoltaico conectado à rede, dimensionado para a energia do banho | **Fonte renovável (solar FV)** |
+| A2 | Aquecedor solar térmico 300 L com apoio elétrico (kit pesquisado) | **Fonte renovável (solar térmica)** |
+| A3 | Kit fotovoltaico on-grid de 2,48 kWp (menor kit com instalação pesquisado) | **Fonte renovável (solar FV)** |
 | A4 | A1 + A2 | Combinação |
 
 ### Resultado: família de referência, tarifa cheia
@@ -92,12 +92,13 @@ A **eficiência energética** aparece de duas formas:
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | A0 | 88,0 | — | — | — | — | — | — | 5,50 kW |
 | A1 | 43,5 | 48,50 | 582,06 | R$ 0 | imediato | R$ 5.821 | 20,6 | 4,35 kW |
-| A2 🌱 | 26,4 | 67,14 | 805,73 | R$ 3.500 | 5,0 anos | R$ 3.557 | 28,5 | 1,65 kW |
-| A3 🌱 | 88,0* | 81,53 | 978,38 | R$ 4.400 | 5,0 anos | R$ 4.384 | 40,7 | 5,50 kW |
-| A4 🌱 | 13,1 | 81,70 | 980,35 | R$ 3.500 | 4,0 anos | R$ 5.303 | 34,6 | 1,31 kW |
+| A2 🌱 | 26,4 | 67,14 | 805,73 | R$ 5.624 | 8,0 anos | R$ 1.433 | 28,5 | 1,65 kW |
+| A3 🌱 | 88,0* | 81,53 | 978,38 | R$ 4.159 | 4,7 anos | R$ 4.625 | 40,7 | 5,50 kW |
+| A4 🌱 | 13,1 | 81,70 | 980,35 | R$ 5.624 | 6,4 anos | R$ 3.179 | 34,6 | 1,31 kW |
 
 \* O FV não muda o consumo do chuveiro: gera energia de dia, que volta como crédito. Para comparar a **mesma
-necessidade**, só a energia do banho (88 kWh) entra como compensada; o excedente de ~26 kWh/mês não foi contado.
+necessidade**, só a energia do banho (88 kWh) entra como compensada. O kit gera ~257 kWh/mês; o restante abate
+o consumo de outros aparelhos ou vira crédito, mas não foi contado na comparação.
 
 Tabela completa, cenário com Tarifa Social e sensibilidade: [`resultados_gerados.md`](resultados_gerados.md).
 
@@ -111,8 +112,8 @@ Tabela completa, cenário com Tarifa Social e sensibilidade: [`resultados_gerado
 - **Ambiente:** reduz kWh e também água (~1.080 L/mês a menos na família de referência).
 
 ### A2: Aquecedor solar térmico
-- **Custo:** ~R$ 3.500 + R$ 100/ano de manutenção; vida útil de ~15 anos, então o payback de 5,0 anos fica bem
-  dentro dela.
+- **Custo:** R$ 5.624 pelo kit de 300 L (sem instalação) + R$ 100/ano de manutenção. O payback de 8,0 anos fica
+  dentro da vida útil (~15 anos), mas a instalação, não incluída, aumenta esse prazo.
 - **Viabilidade:** precisa de telhado ensolarado (de preferência voltado para o norte), estrutura para o
   reservatório e tubulação de água quente. Famílias que pagam aluguel dependem do proprietário. Programas
   habitacionais e projetos de eficiência energética das distribuidoras (PEE/ANEEL) já instalam esse sistema em
@@ -121,7 +122,9 @@ Tabela completa, cenário com Tarifa Social e sensibilidade: [`resultados_gerado
   recorre a termelétricas. Impactos de fabricação (vidro, cobre, alumínio) são baixos, e o equipamento é reciclável.
 
 ### A3: Fotovoltaico
-- **Custo:** ~R$ 4.400 para 2 módulos. Em 2026, a energia compensada paga 60% do Fio B, e essa cobrança sobe até 2029.
+- **Custo:** R$ 4.159 pelo kit de 2,48 kWp com instalação, segundo o anúncio pesquisado. Só para o banho
+  bastariam ~1,1 kWp, mas o kit pesquisado era o menor disponível. Em 2026, a energia compensada paga 60% do Fio B,
+  e essa cobrança sobe até 2029.
 - **Viabilidade:** exige telhado próprio, projeto e homologação na distribuidora. O inversor costuma precisar de
   troca durante a vida útil.
 - **Ambiente:** evita mais kWh da rede no ano, mas **não reduz o pico noturno**. Os módulos exigem descarte
@@ -137,14 +140,15 @@ evitado. Deixamos isso explícito para não exagerar o impacto.
 ## 6. Recomendações (as mesmas que o assistente dá)
 
 1. **Comece sempre pelos hábitos (A1):** economia imediata de ~R$ 48/mês sem gastar nada.
-2. **Fonte renovável: aquecedor solar (A2)** para a maioria das famílias do público:
-   - tem o menor investimento entre as renováveis;
-   - ataca diretamente o consumo do banho e o pico de demanda;
-   - combinado com os hábitos (A4), tem o **menor payback (4,0 anos)**.
-3. **Fotovoltaico (A3)** quando a família tem casa própria, consumo total alto e orçamento ou financiamento. Ele tem
-   payback parecido, mas investimento maior e não ajuda no pico.
-4. **Famílias com Tarifa Social:** os primeiros 80 kWh já são grátis, então o FV tem pouco ganho real. O assistente
-   coloca o FV por último e avisa quando a economia de hábitos cai dentro da faixa gratuita.
+2. **Fonte renovável, com os preços pesquisados: kit fotovoltaico (A3)** para a família de referência:
+   - menor investimento (R$ 4.159) e menor payback (4,7 anos) entre as renováveis;
+   - exige telhado próprio sem sombra e **não reduz o pico noturno**.
+3. **Aquecedor solar (A2):** payback de 8,0 anos (6,4 anos junto com os hábitos), só pelo kit, sem instalação.
+   Continua sendo a melhor opção para **aliviar o pico das 18h–21h** e para **famílias com Tarifa Social**: com os
+   primeiros 80 kWh grátis, o ganho real do FV é pequeno.
+4. **Atenção ao preço:** o resultado A3 × A2 depende muito dos preços. O kit FV saiu por ≈ R$ 1.677/kWp com
+   instalação, abaixo do usual. Com preços mais típicos de sistema instalado, os dois ficam próximos. Por isso o
+   assistente mostra os dois e explica a diferença.
 
 A regra está implementada em `energia/alternativas.py → recomendar()`:
 1. hábitos primeiro;
@@ -159,21 +163,24 @@ potência (4.500 W, estimado) num consumo total de 83,1 kWh/mês. Detalhes no Ce
 | Alternativa | Economia/mês | Investimento | Payback |
 |---|---:|---:|---:|
 | A1 Hábitos | R$ 19,84 | R$ 0 | imediato |
-| A2 Aquecedor solar 200 L | R$ 27,47 | R$ 3.500 | 15,2 anos (passa da vida útil) |
-| A3 Fotovoltaico, 1 módulo | R$ 30,67 | R$ 2.200 | 8,2 anos |
-| A4 Hábitos + aquecedor | R$ 33,42 | R$ 3.500 | 11,6 anos |
+| A2 Aquecedor solar 300 L | R$ 27,47 | R$ 5.624 | 24,5 anos (passa da vida útil) |
+| A3 Kit fotovoltaico 2,48 kWp | R$ 30,67 | R$ 4.159 | 15,5 anos (dentro da vida útil de 25 anos) |
+| A4 Hábitos + aquecedor | R$ 33,42 | R$ 5.624 | 18,7 anos |
 
 **Conclusão:**
-- Com pouca gente e chuveiro fraco, o banho gasta só ~36 kWh/mês, e o aquecedor solar de 200 L **não se paga**
-  dentro da vida útil. Um kit menor (100 L), mais barato, poderia mudar isso, mas não foi modelado.
-- Nesse caso, a recomendação é **hábitos**. Se a família quiser investir, a opção é **1 placa fotovoltaica**.
+- Com pouca gente e chuveiro fraco, o banho gasta só ~36 kWh/mês. O aquecedor solar de 300 L **não se paga** dentro
+  da vida útil, e o kit FV demora 15,5 anos, porque a conta já é pequena (o mínimo faturado também limita a
+  compensação).
+- Nesse caso, a recomendação prática é **mudar hábitos**. Investir em energia renovável só faz sentido
+  financeiramente com um equipamento menor e mais barato do que os pesquisados.
 - É por isso que o assistente recalcula para cada família em vez de dar uma resposta fixa.
 
 ### Sensibilidade
 - **Tarifa:** quanto maior, mais rápido tudo se paga.
-- **Banhos curtos:** com banhos já curtos (5 min), o aquecedor solar demora mais a se pagar (~9 anos), e o FV
-  passa a ser mais vantajoso.
-- **Banhos longos:** com banhos longos (12 min), o aquecedor solar se paga em menos de 4 anos.
+- **Banhos curtos:** com banhos já curtos (5 min), o aquecedor solar leva ~14 anos para se pagar, quase a vida útil
+  inteira; o FV leva ~8 anos.
+- **Banhos longos:** com banhos longos (12 min), o aquecedor solar se paga em ~5 anos e o FV em ~3 anos.
+- **Fração solar:** entre 60% e 80%, o payback do aquecedor solar vai de 9,5 para 6,9 anos.
 
 Por isso o assistente **recalcula com os dados de cada família** em vez de dar uma resposta única.
 
@@ -185,9 +192,10 @@ Por isso o assistente **recalcula com os dados de cada família** em vez de dar 
   ficaram de fora.
 - O payback é simples: não considera juros, inflação nem reajustes de tarifa (reajustes tendem a melhorar o payback).
 - Fração solar e geração FV são médias anuais. O inverno e o sombreamento reduzem os valores.
-- Os preços de equipamentos variam por região e com o tempo.
+- Os preços vêm de 1 anúncio de cada equipamento (nov/2026). O aquecedor solar não inclui instalação, e a instalação
+  inclusa no kit FV precisa ser confirmada. Preços variam por região e com o tempo.
 - A combinação Tarifa Social + compensação FV não foi modelada; a economia do FV nesse caso está superestimada.
 - A potência na posição verão (58% da de inverno) é uma aproximação; varia por modelo.
-- O aquecedor solar foi modelado só no tamanho de 200 L. Para casas com 1 ou 2 pessoas, um kit menor e mais barato
+- O aquecedor solar foi modelado só com o kit de 300 L pesquisado. Para casas com 1 ou 2 pessoas, um kit menor e mais barato
   pode ter payback melhor do que o calculado.
 - **Nenhum valor é garantia de economia:** o assistente repete isso em todas as respostas com números.

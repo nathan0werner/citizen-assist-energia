@@ -12,13 +12,14 @@ tarifa_kwh,1.09,R$/kWh,"Tarifa final de referência (com tributos) – residenci
 gratuidade_tarifa_social_kwh,80,kWh/mês,"Consumo isento para famílias da Tarifa Social (CadÚnico, renda ≤ ½ salário mínimo per capita)",PUBLICADO,LEI_15235_2025;ANEEL_TSEE_2025,Consumo acima de 80 kWh é cobrado sem desconto.
 custo_disponibilidade_kwh,50,kWh/mês,Consumo mínimo faturado (ligação bifásica). Monofásica = 30; trifásica = 100.,PUBLICADO,ANEEL_REN_1000,
 fracao_solar,0.7,fração,Parcela da energia do banho fornecida pelo sol (aquecedor solar em São Paulo),ESTIMADO,ABNT_NBR_15569;INMETRO_PBE_SOLAR;CRESESB_SUNDATA,Sistemas bem dimensionados ficam tipicamente entre 60% e 80%; o restante vem da resistência elétrica de apoio.
-custo_aquecedor_solar,3500,R$,Kit aquecedor solar 200 L (2 m² de coletor) instalado,ESTIMADO,PESQUISA_PRECOS_EQUIPE,Faixa pesquisada R$ 2.500 a R$ 5.000; depende do telhado e da hidráulica.
+custo_aquecedor_solar,5624,R$,"Kit aquecedor solar 300 L (nível) + 2 placas coletoras – preço do kit, sem instalação",PUBLICADO,ANUNCIO_AQUECEDOR_ML,Anúncio no Mercado Livre pesquisado pela equipe em 18/11/2026. Instalação não incluída: o custo real é maior.
 vida_util_aquecedor_anos,15,anos,Vida útil do aquecedor solar,ESTIMADO,INMETRO_PBE_SOLAR,
 manutencao_aquecedor_ano,100,R$/ano,Limpeza de coletores / revisão,ESTIMADO,PESQUISA_PRECOS_EQUIPE,
 irradiacao_kwh_m2_dia,4.6,kWh/m²/dia,Irradiação média diária no plano inclinado – São Paulo,PUBLICADO,CRESESB_SUNDATA;ATLAS_SOLAR_2017,Média anual; no inverno é menor.
 performance_ratio,0.75,fração,"Rendimento global do sistema FV (perdas, temperatura, inversor)",ESTIMADO,CRESESB_MANUAL_FV,"Valores típicos 0,70–0,80."
 potencia_modulo_kwp,0.55,kWp,Potência de um módulo comercial,ESTIMADO,PESQUISA_PRECOS_EQUIPE,
-custo_fv_r_kwp,4000,R$/kWp,Custo instalado de sistema FV residencial pequeno,ESTIMADO,GREENER_ESTUDO_GD,Sistemas pequenos custam mais por kWp que os grandes.
+kit_fv_kwp,2.48,kWp,Potência do menor kit fotovoltaico on-grid pesquisado (microinversor),PUBLICADO,ANUNCIO_FV_NEOSOLAR,
+kit_fv_preco,4159,R$,"Preço do kit fotovoltaico 2,48 kWp com instalação, segundo a equipe",PUBLICADO,ANUNCIO_FV_NEOSOLAR,Anúncio Neosolar pesquisado pela equipe em 18/11/2026 (≈ R$ 1.677/kWp). Valor abaixo do usual para sistema instalado: confirmar se a instalação está mesmo incluída.
 fracao_fio_b_tarifa,0.25,fração,Participação aproximada do Fio B na tarifa final,ESTIMADO,ANEEL_TARIFAS,
 percentual_fio_b_2026,0.6,fração,Parcela do Fio B cobrada sobre energia compensada em 2026 (sistemas novos),PUBLICADO,LEI_14300_2022,
 vida_util_fv_anos,25,anos,Vida útil dos módulos FV,ESTIMADO,CRESESB_MANUAL_FV,Inversor costuma ser trocado uma vez nesse período (~10–12 anos).

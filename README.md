@@ -90,15 +90,19 @@ tests/               testes automáticos
 | Alternativa | Economia/mês | Investimento | Payback | CO₂ evitado/ano |
 |---|---:|---:|---:|---:|
 | A1 Hábitos (5 min + posição verão) | R$ 48,50 | R$ 0 | imediato | 20,6 kg |
-| A2 Aquecedor solar 🌱 | R$ 67,14 | R$ 3.500 | 5,0 anos | 28,5 kg |
-| A3 Fotovoltaico 1,1 kWp 🌱 | R$ 81,53 | R$ 4.400 | 5,0 anos | 40,7 kg |
-| A4 Hábitos + aquecedor solar 🌱 | R$ 81,70 | R$ 3.500 | 4,0 anos | 34,6 kg |
+| A2 Aquecedor solar 300 L 🌱 | R$ 67,14 | R$ 5.624 (kit, sem instalação) | 8,0 anos | 28,5 kg |
+| A3 Kit fotovoltaico 2,48 kWp 🌱 | R$ 81,53 | R$ 4.159 (com instalação) | 4,7 anos | 40,7 kg |
+| A4 Hábitos + aquecedor solar 🌱 | R$ 81,70 | R$ 5.624 | 6,4 anos | 34,6 kg |
+
+Preços de anúncios pesquisados pela equipe em 18/11/2026 (`data/pesquisa_precos.csv`).
 
 **Recomendação:**
 1. Hábitos primeiro.
-2. Aquecedor solar como fonte renovável: menor investimento e o único que reduz o pico das 18h–21h.
-3. Fotovoltaico para quem tem casa própria e consumo alto.
-4. Com Tarifa Social, o FV vai por último.
+2. Com os preços pesquisados, o kit fotovoltaico é a fonte renovável que se paga mais rápido. Exige telhado próprio
+   e não reduz o pico das 18h–21h.
+3. Aquecedor solar para aliviar o pico e para famílias com Tarifa Social, em que os primeiros 80 kWh já são grátis
+   e o FV rende pouco.
+4. Em casas pequenas (cenário com 2 pessoas), só os hábitos compensam financeiramente.
 
 Detalhes e justificativas em [`docs/analise_energetica.md`](docs/analise_energetica.md).
 

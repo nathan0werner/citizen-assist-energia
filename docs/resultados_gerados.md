@@ -10,9 +10,9 @@
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | A0 | Situação atual (chuveiro elétrico) | 88,0 | 239,80 | 0,00 | 0,00 | 0,00 | — | 0,00 | 0,0 | 5,50 |
 | A1 | Hábitos: banho de 5 min + posição verão 6 meses/ano | 43,5 | 191,30 | 48,50 | 582,06 | 0,00 | imediato | 5.820,60 | 20,6 | 4,35 |
-| A2 | Aquecedor solar térmico (200 L) com apoio elétrico 🌱 | 26,4 | 172,66 | 67,14 | 805,73 | 3.500,00 | 5,0 anos | 3.557,28 | 28,5 | 1,65 |
-| A3 | Fotovoltaico on-grid: 2 módulo(s) (1,10 kWp) 🌱 | 88,0 | 158,27 | 81,53 | 978,38 | 4.400,00 | 5,0 anos | 4.383,84 | 40,7 | 5,50 |
-| A4 | Combinação: hábitos (A1) + aquecedor solar (A2) 🌱 | 13,1 | 158,10 | 81,70 | 980,35 | 3.500,00 | 4,0 anos | 5.303,46 | 34,6 | 1,31 |
+| A2 | Aquecedor solar térmico (300 L) com apoio elétrico 🌱 | 26,4 | 172,66 | 67,14 | 805,73 | 5.624,00 | 8,0 anos | 1.433,28 | 28,5 | 1,65 |
+| A3 | Kit fotovoltaico on-grid 2,48 kWp 🌱 | 88,0 | 158,27 | 81,53 | 978,38 | 4.159,00 | 4,7 anos | 4.624,84 | 40,7 | 5,50 |
+| A4 | Combinação: hábitos (A1) + aquecedor solar (A2) 🌱 | 13,1 | 158,10 | 81,70 | 980,35 | 5.624,00 | 6,4 anos | 3.179,46 | 34,6 | 1,31 |
 
 ## Cenário 2 – Mesma família com a Tarifa Social (80 kWh/mês grátis)
 
@@ -20,9 +20,9 @@
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | A0 | Situação atual (chuveiro elétrico) | 88,0 | 152,60 | 0,00 | 0,00 | 0,00 | — | 0,00 | 0,0 | 5,50 |
 | A1 | Hábitos: banho de 5 min + posição verão 6 meses/ano | 43,5 | 104,10 | 48,51 | 582,06 | 0,00 | imediato | 5.820,60 | 20,6 | 4,35 |
-| A2 | Aquecedor solar térmico (200 L) com apoio elétrico 🌱 | 26,4 | 85,46 | 67,14 | 805,73 | 3.500,00 | 5,0 anos | 3.557,28 | 28,5 | 1,65 |
-| A3 | Fotovoltaico on-grid: 2 módulo(s) (1,10 kWp) 🌱 | 88,0 | 71,07 | 81,53 | 978,38 | 4.400,00 | 5,0 anos | 4.383,84 | 40,7 | 5,50 |
-| A4 | Combinação: hábitos (A1) + aquecedor solar (A2) 🌱 | 13,1 | 70,90 | 81,70 | 980,35 | 3.500,00 | 4,0 anos | 5.303,46 | 34,6 | 1,31 |
+| A2 | Aquecedor solar térmico (300 L) com apoio elétrico 🌱 | 26,4 | 85,46 | 67,14 | 805,73 | 5.624,00 | 8,0 anos | 1.433,28 | 28,5 | 1,65 |
+| A3 | Kit fotovoltaico on-grid 2,48 kWp 🌱 | 88,0 | 71,07 | 81,53 | 978,38 | 4.159,00 | 4,7 anos | 4.624,84 | 40,7 | 5,50 |
+| A4 | Combinação: hábitos (A1) + aquecedor solar (A2) 🌱 | 13,1 | 70,90 | 81,70 | 980,35 | 5.624,00 | 6,4 anos | 3.179,46 | 34,6 | 1,31 |
 
 > No cenário 2, a economia do fotovoltaico (A3) foi calculada com a tarifa cheia, porque a combinação gratuidade + compensação de créditos não foi modelada; por isso o valor está **superestimado**.
 
@@ -34,26 +34,26 @@
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | A0 | Situação atual (chuveiro elétrico) | 36,0 | 90,58 | 0,00 | 0,00 | 0,00 | — | 0,00 | 0,0 | 4,50 |
 | A1 | Hábitos: banho de 5 min + posição verão 6 meses/ano | 17,8 | 70,74 | 19,84 | 238,12 | 0,00 | imediato | 2.381,21 | 8,4 | 3,56 |
-| A2 | Aquecedor solar térmico (200 L) com apoio elétrico 🌱 | 10,8 | 63,11 | 27,47 | 329,62 | 3.500,00 | 15,2 anos | -1.203,84 | 11,6 | 1,35 |
-| A3 | Fotovoltaico on-grid: 1 módulo(s) (0,55 kWp) 🌱 | 36,0 | 59,91 | 30,67 | 368,01 | 2.200,00 | 8,2 anos | 480,06 | 15,3 | 4,50 |
-| A4 | Combinação: hábitos (A1) + aquecedor solar (A2) 🌱 | 5,3 | 57,16 | 33,42 | 401,05 | 3.500,00 | 11,6 anos | -489,48 | 14,2 | 1,07 |
+| A2 | Aquecedor solar térmico (300 L) com apoio elétrico 🌱 | 10,8 | 63,11 | 27,47 | 329,62 | 5.624,00 | 24,5 anos | -3.327,84 | 11,6 | 1,35 |
+| A3 | Kit fotovoltaico on-grid 2,48 kWp 🌱 | 36,0 | 59,91 | 30,67 | 368,01 | 4.159,00 | 15,5 anos | -1.478,94 | 15,3 | 4,50 |
+| A4 | Combinação: hábitos (A1) + aquecedor solar (A2) 🌱 | 5,3 | 57,16 | 33,42 | 401,05 | 5.624,00 | 18,7 anos | -2.613,48 | 14,2 | 1,07 |
 
-> Recomendação do código para este caso: A1 → A3. Com pouco uso de água quente, o aquecedor solar de 200 L não se paga dentro da vida útil (15 anos) e sai da recomendação.
+> Recomendação do código para este caso: A1 → A3. Com pouco uso de água quente, o aquecedor solar de 300 L não se paga dentro da vida útil (15 anos) e sai da recomendação.
 
 ## Sensibilidade (payback em anos)
 
 | Tarifa (R$/kWh) | Banho (min) | Fração solar | Payback A2 | Payback A3 | Payback A4 |
 |---:|---:|---:|---:|---:|---:|
-| 0,90 | 5 | 0,7 | 11,1 | 5,4 | 9,9 |
-| 0,90 | 8 | 0,7 | 6,2 | 6,2 | 4,9 |
-| 0,90 | 12 | 0,7 | 3,9 | 5,9 | 3,0 |
-| 1,09 | 5 | 0,7 | 8,7 | 4,3 | 7,8 |
-| 1,09 | 8 | 0,6 | 5,9 | 5,0 | 4,3 |
-| 1,09 | 8 | 0,7 | 5,0 | 5,0 | 4,0 |
-| 1,09 | 8 | 0,8 | 4,3 | 5,0 | 3,7 |
-| 1,09 | 12 | 0,7 | 3,2 | 4,8 | 2,4 |
-| 1,30 | 5 | 0,7 | 7,0 | 3,5 | 6,3 |
-| 1,30 | 8 | 0,7 | 4,1 | 4,1 | 3,3 |
-| 1,30 | 12 | 0,7 | 2,6 | 4,0 | 2,0 |
+| 0,90 | 5 | 0,7 | 17,8 | 10,3 | 15,9 |
+| 0,90 | 8 | 0,7 | 9,9 | 5,9 | 7,9 |
+| 0,90 | 12 | 0,7 | 6,3 | 3,7 | 4,7 |
+| 1,09 | 5 | 0,7 | 13,9 | 8,1 | 12,5 |
+| 1,09 | 8 | 0,6 | 9,5 | 4,7 | 6,8 |
+| 1,09 | 8 | 0,7 | 8,0 | 4,7 | 6,4 |
+| 1,09 | 8 | 0,8 | 6,9 | 4,7 | 6,0 |
+| 1,09 | 12 | 0,7 | 5,1 | 3,0 | 3,9 |
+| 1,30 | 5 | 0,7 | 11,2 | 6,6 | 10,1 |
+| 1,30 | 8 | 0,7 | 6,5 | 3,9 | 5,3 |
+| 1,30 | 12 | 0,7 | 4,2 | 2,5 | 3,2 |
 
 Tabela completa (27 combinações) em `data/sensibilidade.csv`.

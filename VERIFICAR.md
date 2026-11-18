@@ -9,8 +9,9 @@ O enunciado exige que a equipe confira dados, cálculos e referências. Marque c
 - [ ] **Lei 15.235/2025:** confirme a gratuidade de 80 kWh e os critérios no site do Planalto ou da ANEEL.
 - [ ] **Fator de emissão MCTI:** veja se já existe a média anual de 2024/2025 e atualize `fator_emissao_kg_kwh`.
 - [ ] **Irradiação em São Paulo:** consulte o CRESESB SunData com o CEP/coordenadas e confirme os ~4,6 kWh/m²/dia.
-- [ ] **Preços:** preencha `data/pesquisa_precos.csv` com pelo menos 3 orçamentos reais de aquecedor solar e de FV
-  (loja/site, data, valor) e ajuste `custo_aquecedor_solar` e `custo_fv_r_kwp` pela média.
+- [x] **Preços:** 1 anúncio de cada equipamento registrado em `data/pesquisa_precos.csv` (18/11/2026).
+  - [ ] Confirmar se o kit FV da Neosolar (R$ 4.159) inclui mesmo a instalação.
+  - [ ] Se der tempo, acrescentar mais 2 anúncios de cada e usar a média.
 - [ ] **Potência verão/inverno:** confira na tabela do INMETRO ou na embalagem de um chuveiro comum.
 - [ ] **PROCEL PPH 2019:** confirme a participação do chuveiro no consumo residencial e cite o número exato.
 

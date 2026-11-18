@@ -1,7 +1,4 @@
 item,descricao,fornecedor_ou_site,data_consulta,valor_r,observacao
-aquecedor_solar,PREENCHER: kit 200 L + 2 m2 coletor (instalado),PREENCHER,PREENCHER,PREENCHER,faixa de referência usada na análise: R$ 2.500 a R$ 5.000
-aquecedor_solar,PREENCHER,PREENCHER,PREENCHER,PREENCHER,
-aquecedor_solar,PREENCHER,PREENCHER,PREENCHER,PREENCHER,
-fotovoltaico,PREENCHER: kit on-grid ~1 kWp (instalado e homologado),PREENCHER,PREENCHER,PREENCHER,referência usada na análise: R$ 4.000/kWp
-fotovoltaico,PREENCHER,PREENCHER,PREENCHER,PREENCHER,
-fotovoltaico,PREENCHER,PREENCHER,PREENCHER,PREENCHER,
+fotovoltaico,Kit Energia Solar On Grid Microinversor 2480 Wp,Neosolar (https://www.neosolar.com.br/loja/kit-energia-solar-on-grid-microinversor-2480wp-32364.html),2026-11-18,4159,Equipe informou que inclui instalação (confirmar); ≈ R$ 1.677/kWp; usado na análise
+aquecedor_solar,Aquecedor Solar 300 Litros Nível + 02 Placas A Turbo,Mercado Livre (https://www.mercadolivre.com.br/aquecedor-solar-300-litros-nivel--02-placas-a-turbo/up/MLBU756135457),2026-11-18,5624,Kit completo sem instalação; usado na análise
+aquecedor_solar,Placa coletora 170x100 cobre (ViaSol) – unidade avulsa,Mercado Livre (https://www.mercadolivre.com.br/placa-solar-painel-170x100-aquecedor-solar-de-cobre/up/MLBU1157321710),2026-11-18,1764,Só a placa (sem reservatório nem instalação); não usada no cálculo – serve de referência do custo dos coletores
