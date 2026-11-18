@@ -327,6 +327,7 @@ def r_limitacoes(perfil, res):
             "• Fotovoltaico: geração média de São Paulo (CRESESB) e regras de 2026 da Lei 14.300; sombra, orientação "
             "do telhado e mudanças de regra alteram o resultado. Troca de inversor não foi incluída.\n"
             "• Preços de equipamentos são de pesquisa da equipe e mudam com o tempo e a região.\n"
+            "• Aquecedor solar modelado só com reservatório de 200 L; para 1–2 pessoas um kit menor pode compensar mais.\n"
             "• Payback é simples (sem juros, inflação ou reajustes de tarifa).\n"
             "• Tarifa Social combinada com placa FV não foi modelada.\n"
             "• Antes de comprar, peça orçamento a instaladores e confira com a distribuidora. "

@@ -9,3 +9,8 @@ tarifa_social,A1,Hábitos: banho de 5 min + posição verão 6 meses/ano,não,43
 tarifa_social,A2,Aquecedor solar térmico (200 L) com apoio elétrico,sim,26.4,158.4,85.46,61.6,67.14,805.73,3500,100,4.96,3557.28,28.5,1.65,2880
 tarifa_social,A3,"Fotovoltaico on-grid: 2 módulo(s) (1,10 kWp)",sim,88.0,220,71.07,88.0,81.53,978.38,4400.0,100,5.01,4383.84,40.7,5.5,2880
 tarifa_social,A4,Combinação: hábitos (A1) + aquecedor solar (A2),sim,13.1,145.1,70.9,74.9,81.7,980.35,3500,100,3.98,5303.46,34.6,1.31,1800
+casa_pequena_equipe,A0,Situação atual (chuveiro elétrico),não,36.0,83.1,90.58,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.5,1440
+casa_pequena_equipe,A1,Hábitos: banho de 5 min + posição verão 6 meses/ano,não,17.8,64.9,70.74,18.2,19.84,238.12,0.0,0.0,0.0,2381.21,8.4,3.56,900
+casa_pequena_equipe,A2,Aquecedor solar térmico (200 L) com apoio elétrico,sim,10.8,57.9,63.11,25.2,27.47,329.62,3500,100,15.24,-1203.84,11.6,1.35,1440
+casa_pequena_equipe,A3,"Fotovoltaico on-grid: 1 módulo(s) (0,55 kWp)",sim,36.0,83.1,59.91,33.1,30.67,368.01,2200.0,100,8.21,480.06,15.3,4.5,1440
+casa_pequena_equipe,A4,Combinação: hábitos (A1) + aquecedor solar (A2),sim,5.3,52.4,57.16,30.7,33.42,401.05,3500,100,11.63,-489.48,14.2,1.07,900

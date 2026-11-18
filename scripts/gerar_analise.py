@@ -18,7 +18,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, RAIZ)
 
 from energia import dados  # noqa: E402
-from energia.alternativas import comparar, fmt_anos  # noqa: E402
+from energia.alternativas import comparar, fmt_anos, recomendar  # noqa: E402
 from energia.calculos import Perfil  # noqa: E402
 
 
@@ -87,11 +87,14 @@ def main():
     salvar_parametros()
     base = comparar(Perfil())
     social = comparar(Perfil(tarifa_social=True))
+    casa_equipe = Perfil(pessoas=2, minutos_banho=8, potencia_inverno_w=4500,
+                         potencia_verao_w=round(4500 * 3200 / 5500), consumo_total_kwh_mes=83.1)
+    pequena = comparar(casa_equipe)
 
     with open(os.path.join(RAIZ, "data", "resultados_cenario_base.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["cenario"] + CAB)
-        for nome, res in (("tarifa_cheia", base), ("tarifa_social", social)):
+        for nome, res in (("tarifa_cheia", base), ("tarifa_social", social), ("casa_pequena_equipe", pequena)):
             for linha in linhas_resultado(res):
                 w.writerow([nome] + linha)
 
@@ -120,6 +123,17 @@ def main():
           "",
           "> No cenário 2, a economia do fotovoltaico (A3) foi calculada com a tarifa cheia, porque a combinação "
           "gratuidade + compensação de créditos não foi modelada; por isso o valor está **superestimado**.",
+          "",
+          "## Cenário 3 – Casa de um integrante da equipe (2 pessoas)",
+          "",
+          "2 pessoas, banho de 8 min, chuveiro de baixa potência (4.500 W, **estimado**: a equipe descreveu como "
+          "\"fraquinho\"), consumo total de 83,1 kWh/mês (referência informada pela equipe).",
+          "",
+          tabela_md(pequena),
+          "",
+          "> Recomendação do código para este caso: " + " → ".join(recomendar(pequena, casa_equipe)) +
+          ". Com pouco uso de água quente, o aquecedor solar de 200 L não se paga dentro da vida útil (15 anos) e "
+          "sai da recomendação.",
           "",
           "## Sensibilidade (payback em anos)",
           "",

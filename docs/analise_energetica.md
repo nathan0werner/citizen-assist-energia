@@ -151,6 +151,24 @@ A regra está implementada em `energia/alternativas.py → recomendar()`:
 2. depois as renováveis com payback dentro da vida útil, da menor para a maior;
 3. com Tarifa Social, o FV vai para o fim.
 
+### Caso real: casa de um integrante (2 pessoas)
+Testamos a mesma análise numa casa de um integrante da equipe: 2 pessoas, banho de 8 min e chuveiro de baixa
+potência (4.500 W, estimado) num consumo total de 83,1 kWh/mês. Detalhes no Cenário 3 de
+[`resultados_gerados.md`](resultados_gerados.md).
+
+| Alternativa | Economia/mês | Investimento | Payback |
+|---|---:|---:|---:|
+| A1 Hábitos | R$ 19,84 | R$ 0 | imediato |
+| A2 Aquecedor solar 200 L | R$ 27,47 | R$ 3.500 | 15,2 anos (passa da vida útil) |
+| A3 Fotovoltaico, 1 módulo | R$ 30,67 | R$ 2.200 | 8,2 anos |
+| A4 Hábitos + aquecedor | R$ 33,42 | R$ 3.500 | 11,6 anos |
+
+**Conclusão:**
+- Com pouca gente e chuveiro fraco, o banho gasta só ~36 kWh/mês, e o aquecedor solar de 200 L **não se paga**
+  dentro da vida útil. Um kit menor (100 L), mais barato, poderia mudar isso, mas não foi modelado.
+- Nesse caso, a recomendação é **hábitos**. Se a família quiser investir, a opção é **1 placa fotovoltaica**.
+- É por isso que o assistente recalcula para cada família em vez de dar uma resposta fixa.
+
 ### Sensibilidade
 - **Tarifa:** quanto maior, mais rápido tudo se paga.
 - **Banhos curtos:** com banhos já curtos (5 min), o aquecedor solar demora mais a se pagar (~9 anos), e o FV
@@ -170,4 +188,6 @@ Por isso o assistente **recalcula com os dados de cada família** em vez de dar 
 - Os preços de equipamentos variam por região e com o tempo.
 - A combinação Tarifa Social + compensação FV não foi modelada; a economia do FV nesse caso está superestimada.
 - A potência na posição verão (58% da de inverno) é uma aproximação; varia por modelo.
+- O aquecedor solar foi modelado só no tamanho de 200 L. Para casas com 1 ou 2 pessoas, um kit menor e mais barato
+  pode ter payback melhor do que o calculado.
 - **Nenhum valor é garantia de economia:** o assistente repete isso em todas as respostas com números.

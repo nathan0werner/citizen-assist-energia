@@ -26,6 +26,20 @@
 
 > No cenário 2, a economia do fotovoltaico (A3) foi calculada com a tarifa cheia, porque a combinação gratuidade + compensação de créditos não foi modelada; por isso o valor está **superestimado**.
 
+## Cenário 3 – Casa de um integrante da equipe (2 pessoas)
+
+2 pessoas, banho de 8 min, chuveiro de baixa potência (4.500 W, **estimado**: a equipe descreveu como "fraquinho"), consumo total de 83,1 kWh/mês (referência informada pela equipe).
+
+| Alt. | Descrição | Banho (kWh/mês) | Conta (R$/mês) | Economia (R$/mês) | Economia (R$/ano) | Investimento (R$) | Payback | Saldo 10 anos (R$) | CO₂ evitado (kg/ano) | Potência média no pico (kW) |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| A0 | Situação atual (chuveiro elétrico) | 36,0 | 90,58 | 0,00 | 0,00 | 0,00 | — | 0,00 | 0,0 | 4,50 |
+| A1 | Hábitos: banho de 5 min + posição verão 6 meses/ano | 17,8 | 70,74 | 19,84 | 238,12 | 0,00 | imediato | 2.381,21 | 8,4 | 3,56 |
+| A2 | Aquecedor solar térmico (200 L) com apoio elétrico 🌱 | 10,8 | 63,11 | 27,47 | 329,62 | 3.500,00 | 15,2 anos | -1.203,84 | 11,6 | 1,35 |
+| A3 | Fotovoltaico on-grid: 1 módulo(s) (0,55 kWp) 🌱 | 36,0 | 59,91 | 30,67 | 368,01 | 2.200,00 | 8,2 anos | 480,06 | 15,3 | 4,50 |
+| A4 | Combinação: hábitos (A1) + aquecedor solar (A2) 🌱 | 5,3 | 57,16 | 33,42 | 401,05 | 3.500,00 | 11,6 anos | -489,48 | 14,2 | 1,07 |
+
+> Recomendação do código para este caso: A1 → A3. Com pouco uso de água quente, o aquecedor solar de 200 L não se paga dentro da vida útil (15 anos) e sai da recomendação.
+
 ## Sensibilidade (payback em anos)
 
 | Tarifa (R$/kWh) | Banho (min) | Fração solar | Payback A2 | Payback A3 | Payback A4 |
