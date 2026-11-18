@@ -26,6 +26,9 @@ Estes **não** vieram de usuários. Ficam aqui para separar o que foi decisão d
 - Termos técnicos explicados na própria frase ("payback = tempo para o investimento se pagar").
 - Botões de sugestão na interface web para quem não sabe o que perguntar.
 - A tarifa é calculada a partir da conta do usuário ("R$ X com Y kWh") em vez de pedir "tarifa por kWh".
+- Correção de bug (18/11/2026): "dicas para economizar no banho" abria a comparação completa em vez das dicas,
+  porque a palavra "economizar" era reconhecida antes de "dicas". A ordem das intenções foi ajustada e o caso
+  virou teste automático em `tests/test_energia.py`.
 
 ## Exemplos de ajustes comuns (apague o que não acontecer)
 - "Não sei a potência do chuveiro" → o assistente explica onde achar (etiqueta/caixa) e usa 5.500 W como padrão.

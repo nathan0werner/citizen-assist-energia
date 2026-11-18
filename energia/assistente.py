@@ -116,8 +116,8 @@ INTENCOES = [
     ("fotovoltaico", r"fotovolt|placa solar|placas solares|painel|paineis|energia solar|gerar (minha )?energia|\bfv\b"),
     ("aquecedor_solar", r"aquecedor solar|aquecimento solar|coletor|boiler|solar termic|agua quente solar"),
     ("ambiente", r"co2|carbono|ambient|polui|sustentav|planeta|emiss"),
-    ("comparar", r"compar|melhor opcao|qual (e )?(a )?melhor|vale (mais )?a pena|alternativ|recomend|o que fazer|economizar|economia"),
-    ("habitos", r"dica|habito|banho (mais )?curto|posicao verao|verao|inverno|reduzir"),
+    ("habitos", r"\bdicas?\b|habito|banho (mais )?curto|posicao verao|verao|inverno"),
+    ("comparar", r"compar|melhor opcao|qual (e )?(a )?melhor|vale (mais )?a pena|alternativ|recomend|o que fazer|economizar|economia|reduzir"),
     ("chuveiro", r"chuveiro|banho|quanto gasta|consumo|gasto|conta|kwh|watt|\bw\b"),
 ]
 

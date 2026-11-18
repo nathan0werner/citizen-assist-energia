@@ -88,6 +88,8 @@ class TestAssistente(unittest.TestCase):
             "e placa solar?": "fotovoltaico",
             "compare as opções": "comparar",
             "dicas para o banho": "habitos",
+            "dicas para economizar no banho": "habitos",
+            "o que fazer para economizar?": "comparar",
             "como funciona a tarifa social?": "tarifa_social",
             "quais as fontes?": "fontes",
             "limitações": "limitacoes",

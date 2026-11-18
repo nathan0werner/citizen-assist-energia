@@ -20,6 +20,12 @@ Verificar se o público entende as orientações de energia e as acha úteis, e 
 5. Registre cada participante numa cópia da ficha (`P1.md`, `P2.md`...).
 6. Junte os problemas em [registro_ajustes.md](registro_ajustes.md), corrija o código e, se possível, teste de novo.
 
+### Alternativa: teste por mensagem (sem rodar o programa)
+Se não der para a pessoa usar o assistente na hora, mande pelo WhatsApp as **respostas reais** do assistente
+(geradas pelo próprio código) e as perguntas de compreensão. Registre na ficha que o teste foi "por mensagem". Esse
+formato avalia se as orientações são **compreensíveis**, mas não avalia a navegação no chat; deixe isso claro no
+registro.
+
 ## Métricas
 - Tarefas concluídas sem ajuda (de 5).
 - Nota de clareza (1–5) e de utilidade (1–5).
