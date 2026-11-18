@@ -40,7 +40,7 @@ A lista completa está em [`../data/parametros.csv`](../data/parametros.csv): va
 | Vazão do chuveiro | 3 L/min | Estimado | Faixa típica de chuveiros elétricos (3–5 L/min) |
 | Família de referência | 4 pessoas, 8 min de banho/pessoa/dia | Estimado | Premissa da equipe; o usuário informa a sua situação |
 | Consumo total da casa | 220 kWh/mês | Estimado | Acima da média residencial nacional (~170 kWh/mês, EPE), porque a casa tem chuveiro elétrico |
-| Tarifa final | R$ 0,95/kWh | Estimado | R$ 725,18/MWh (B1 Enel SP, 2025) × 1,0902 (reajuste residencial de 2026) ≈ R$ 0,79/kWh sem tributos; ÷ (1 − 0,12 ICMS − 0,05 PIS/COFINS) ≈ R$ 0,95 |
+| Tarifa final | R$ 1,09/kWh | Estimado | Valor de referência informado pela equipe (R$ 90,62 ÷ 83,1 kWh). Checagem: R$ 725,18/MWh (B1 Enel SP, 2025) × 1,0902 (reajuste de 2026) ≈ R$ 0,79/kWh sem tributos; com ICMS, PIS/COFINS, bandeira e iluminação pública fica na faixa de R$ 0,95–1,10 |
 | Gratuidade da Tarifa Social | 80 kWh/mês | Publicado | Lei 15.235/2025 |
 | Custo de disponibilidade | 30 / 50 / 100 kWh | Publicado | ANEEL REN 1.000/2021 (mono/bi/trifásico) |
 | Fração solar do aquecedor | 70% | Estimado | Faixa típica de 60–80% para São Paulo (NBR 15569, PBE) |
@@ -65,7 +65,7 @@ também um **horizonte de 10 anos**.
 | Calor sensível | Q = m · c · ΔT  →  ΔT = P ÷ (ṁ · c) | 5.500 ÷ (0,05 kg/s × 4.186) ≈ **26 °C** de aquecimento |
 | Potência média (inverno/verão) | P̄ = (P_inv·meses_inv + P_ver·meses_ver) ÷ 12 | (5.500·6 + 3.200·6) ÷ 12 = 4.350 W |
 | Geração fotovoltaica | E = kWp × H × PR × 30 | 1,1 × 4,6 × 0,75 × 30 ≈ 114 kWh/mês |
-| Payback simples | invest. ÷ (economia anual − manutenção) | 3.500 ÷ (58,52 × 12 − 100) ≈ 5,8 anos |
+| Payback simples | invest. ÷ (economia anual − manutenção) | 3.500 ÷ (67,14 × 12 − 100) ≈ 5,0 anos |
 | Emissões evitadas | kWh evitados × fator de emissão | 44,5 × 12 × 0,0385 ≈ 20,6 kg/ano |
 
 A **eficiência energética** aparece de duas formas:
@@ -91,10 +91,10 @@ A **eficiência energética** aparece de duas formas:
 | Alt. | Banho (kWh/mês) | Economia (R$/mês) | Economia (R$/ano) | Investimento | Payback | Saldo em 10 anos | CO₂ evitado (kg/ano) | Potência média no pico |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | A0 | 88,0 | — | — | — | — | — | — | 5,50 kW |
-| A1 | 43,5 | 42,28 | 507,30 | R$ 0 | imediato | R$ 5.073 | 20,6 | 4,35 kW |
-| A2 🌱 | 26,4 | 58,52 | 702,24 | R$ 3.500 | 5,8 anos | R$ 2.522 | 28,5 | 1,65 kW |
-| A3 🌱 | 88,0* | 71,06 | 852,72 | R$ 4.400 | 5,8 anos | R$ 3.127 | 40,7 | 5,50 kW |
-| A4 🌱 | 13,1 | 71,20 | 854,43 | R$ 3.500 | 4,6 anos | R$ 4.044 | 34,6 | 1,31 kW |
+| A1 | 43,5 | 48,50 | 582,06 | R$ 0 | imediato | R$ 5.821 | 20,6 | 4,35 kW |
+| A2 🌱 | 26,4 | 67,14 | 805,73 | R$ 3.500 | 5,0 anos | R$ 3.557 | 28,5 | 1,65 kW |
+| A3 🌱 | 88,0* | 81,53 | 978,38 | R$ 4.400 | 5,0 anos | R$ 4.384 | 40,7 | 5,50 kW |
+| A4 🌱 | 13,1 | 81,70 | 980,35 | R$ 3.500 | 4,0 anos | R$ 5.303 | 34,6 | 1,31 kW |
 
 \* O FV não muda o consumo do chuveiro: gera energia de dia, que volta como crédito. Para comparar a **mesma
 necessidade**, só a energia do banho (88 kWh) entra como compensada; o excedente de ~26 kWh/mês não foi contado.
@@ -111,7 +111,7 @@ Tabela completa, cenário com Tarifa Social e sensibilidade: [`resultados_gerado
 - **Ambiente:** reduz kWh e também água (~1.080 L/mês a menos na família de referência).
 
 ### A2: Aquecedor solar térmico
-- **Custo:** ~R$ 3.500 + R$ 100/ano de manutenção; vida útil de ~15 anos, então o payback de 5,8 anos fica bem
+- **Custo:** ~R$ 3.500 + R$ 100/ano de manutenção; vida útil de ~15 anos, então o payback de 5,0 anos fica bem
   dentro dela.
 - **Viabilidade:** precisa de telhado ensolarado (de preferência voltado para o norte), estrutura para o
   reservatório e tubulação de água quente. Famílias que pagam aluguel dependem do proprietário. Programas
@@ -136,11 +136,11 @@ evitado. Deixamos isso explícito para não exagerar o impacto.
 
 ## 6. Recomendações (as mesmas que o assistente dá)
 
-1. **Comece sempre pelos hábitos (A1):** economia imediata de ~R$ 42/mês sem gastar nada.
+1. **Comece sempre pelos hábitos (A1):** economia imediata de ~R$ 48/mês sem gastar nada.
 2. **Fonte renovável: aquecedor solar (A2)** para a maioria das famílias do público:
    - tem o menor investimento entre as renováveis;
    - ataca diretamente o consumo do banho e o pico de demanda;
-   - combinado com os hábitos (A4), tem o **menor payback (4,6 anos)**.
+   - combinado com os hábitos (A4), tem o **menor payback (4,0 anos)**.
 3. **Fotovoltaico (A3)** quando a família tem casa própria, consumo total alto e orçamento ou financiamento. Ele tem
    payback parecido, mas investimento maior e não ajuda no pico.
 4. **Famílias com Tarifa Social:** os primeiros 80 kWh já são grátis, então o FV tem pouco ganho real. O assistente
@@ -153,7 +153,7 @@ A regra está implementada em `energia/alternativas.py → recomendar()`:
 
 ### Sensibilidade
 - **Tarifa:** quanto maior, mais rápido tudo se paga.
-- **Banhos curtos:** com banhos já curtos (5 min), o aquecedor solar demora mais a se pagar (~10 anos), e o FV
+- **Banhos curtos:** com banhos já curtos (5 min), o aquecedor solar demora mais a se pagar (~9 anos), e o FV
   passa a ser mais vantajoso.
 - **Banhos longos:** com banhos longos (12 min), o aquecedor solar se paga em menos de 4 anos.
 

@@ -320,7 +320,7 @@ def r_fontes(perfil, res):
 
 def r_limitacoes(perfil, res):
     return ("⚠️ Limitações das estimativas:\n"
-            "• Tarifa: uso um valor médio estimado com tributos (R$ 0,95/kWh, Enel SP 2026). Bandeiras tarifárias, "
+            "• Tarifa: uso um valor de referência com tributos (R$ 1,09/kWh, Grande SP 2026). Bandeiras tarifárias, "
             "faixas de ICMS e taxa de iluminação pública não entram. Informe sua conta para melhorar o cálculo.\n"
             "• Chuveiro: potência e vazão variam por modelo; a posição verão foi estimada em ≈58% da potência de inverno.\n"
             "• Aquecedor solar: fração solar de 70% é média anual; inverno e dias nublados reduzem.\n"

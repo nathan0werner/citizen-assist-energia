@@ -44,6 +44,7 @@ REFERENCIAS = {
                        "https://portal.inmet.gov.br/normais"),
     "SABESP_USO_RACIONAL": ("SABESP – Dicas de uso racional da água (banho de até 5 minutos)",
                             "https://site.sabesp.com.br/"),
+    "REFERENCIA_EQUIPE": ("Valor de referência informado pela equipe: R$ 90,62 para 83,1 kWh/mês (≈ R$ 1,09/kWh)", ""),
     "PESQUISA_PRECOS_EQUIPE": ("Pesquisa de preços da equipe em lojas de materiais e instaladores (ver data/pesquisa_precos.csv)",
                                "data/pesquisa_precos.csv"),
     "FISICA_BASICA": ("Halliday, Resnick & Walker – Fundamentos de Física, vol. 2 (calor específico, Q = m·c·ΔT)", ""),

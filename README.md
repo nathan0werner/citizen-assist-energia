@@ -85,14 +85,14 @@ testes_usuarios/     protocolo, fichas e registro de ajustes
 tests/               testes automáticos
 ```
 
-## 📊 Resultado principal (família de referência, tarifa estimada de R$ 0,95/kWh)
+## 📊 Resultado principal (família de referência, tarifa de referência de R$ 1,09/kWh)
 
 | Alternativa | Economia/mês | Investimento | Payback | CO₂ evitado/ano |
 |---|---:|---:|---:|---:|
-| A1 Hábitos (5 min + posição verão) | R$ 42,28 | R$ 0 | imediato | 20,6 kg |
-| A2 Aquecedor solar 🌱 | R$ 58,52 | R$ 3.500 | 5,8 anos | 28,5 kg |
-| A3 Fotovoltaico 1,1 kWp 🌱 | R$ 71,06 | R$ 4.400 | 5,8 anos | 40,7 kg |
-| A4 Hábitos + aquecedor solar 🌱 | R$ 71,20 | R$ 3.500 | 4,6 anos | 34,6 kg |
+| A1 Hábitos (5 min + posição verão) | R$ 48,50 | R$ 0 | imediato | 20,6 kg |
+| A2 Aquecedor solar 🌱 | R$ 67,14 | R$ 3.500 | 5,0 anos | 28,5 kg |
+| A3 Fotovoltaico 1,1 kWp 🌱 | R$ 81,53 | R$ 4.400 | 5,0 anos | 40,7 kg |
+| A4 Hábitos + aquecedor solar 🌱 | R$ 81,70 | R$ 3.500 | 4,0 anos | 34,6 kg |
 
 **Recomendação:**
 1. Hábitos primeiro.

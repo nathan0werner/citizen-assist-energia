@@ -68,7 +68,7 @@ def tabela_md(res):
 
 def sensibilidade():
     linhas = []
-    for tarifa in (0.75, 0.95, 1.15):
+    for tarifa in (0.90, 1.09, 1.30):
         for minutos in (5, 8, 12):
             for fs in (0.6, 0.7, 0.8):
                 original = dados.P["fracao_solar"]
@@ -110,7 +110,7 @@ def main():
           "## Cenário 1 – Família de referência, tarifa cheia",
           "",
           "4 pessoas, banho de 8 min, chuveiro de 5.500 W sempre no inverno, consumo total de 220 kWh/mês, "
-          "tarifa estimada de R$ 0,95/kWh. Período de referência: 1 mês (e 1 ano); horizonte de investimento: 10 anos.",
+          "tarifa de referência de R$ 1,09/kWh. Período de referência: 1 mês (e 1 ano); horizonte de investimento: 10 anos.",
           "",
           tabela_md(base),
           "",
@@ -126,7 +126,7 @@ def main():
           "| Tarifa (R$/kWh) | Banho (min) | Fração solar | Payback A2 | Payback A3 | Payback A4 |",
           "|---:|---:|---:|---:|---:|---:|"]
     for l in sens:
-        if l[2] == 0.7 or (l[0] == 0.95 and l[1] == 8):
+        if l[2] == 0.7 or (l[0] == 1.09 and l[1] == 8):
             md.append(f"| {br(l[0])} | {l[1]} | {br(l[2], 1)} | {br(l[3], 1) if l[3] != '' else '—'} | "
                       f"{br(l[4], 1) if l[4] != '' else '—'} | {br(l[5], 1) if l[5] != '' else '—'} |")
     md.append("")

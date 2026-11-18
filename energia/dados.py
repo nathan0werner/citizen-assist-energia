@@ -47,10 +47,12 @@ P = {
         "Família com chuveiro elétrico consome mais que a média residencial nacional (~170 kWh/mês, EPE)."),
     # ---------------- Tarifa ----------------
     "tarifa_kwh": Parametro(
-        0.95, "R$/kWh", "Tarifa final estimada (com tributos) – residencial B1, Enel SP, 2026",
-        ("ANEEL_TARIFAS", "EXAME_ENEL_2025", "ENEL_REAJUSTE_2026"), True,
-        "R$ 725,18/MWh (B1, 2025) × 1,0902 (reajuste residencial 2026) ≈ R$ 0,79/kWh sem tributos; "
-        "÷ (1 − 12% ICMS − ~5% PIS/COFINS) ≈ R$ 0,95/kWh. Use o valor da sua conta: total ÷ kWh."),
+        1.09, "R$/kWh", "Tarifa final de referência (com tributos) – residencial, Grande São Paulo, 2026",
+        ("REFERENCIA_EQUIPE", "ANEEL_TARIFAS", "EXAME_ENEL_2025", "ENEL_REAJUSTE_2026"), True,
+        "Valor informado pela equipe: R$ 90,62 para 83,1 kWh no mês (R$ 90,62 ÷ 83,1 ≈ R$ 1,09/kWh). "
+        "Checagem pela tarifa publicada: R$ 725,18/MWh (B1 Enel SP 2025) × 1,0902 (reajuste 2026) ≈ R$ 0,79/kWh "
+        "sem tributos; com ICMS, PIS/COFINS, bandeira e iluminação pública chega à faixa de R$ 0,95–1,10/kWh. "
+        "O usuário pode informar a própria conta: total ÷ kWh."),
     "gratuidade_tarifa_social_kwh": Parametro(
         80, "kWh/mês", "Consumo isento para famílias da Tarifa Social (CadÚnico, renda ≤ ½ salário mínimo per capita)",
         ("LEI_15235_2025", "ANEEL_TSEE_2025"), False,

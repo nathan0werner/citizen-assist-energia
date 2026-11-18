@@ -3,7 +3,7 @@
 O enunciado exige que a equipe confira dados, cálculos e referências. Marque cada item.
 
 ## Dados (energia/dados.py → rode `python scripts/gerar_analise.py` depois de mudar)
-- [ ] **Tarifa Enel SP 2026:** abra a página de tarifas da ANEEL e confira a tarifa B1 residencial (TE + TUSD).
+- [ ] **Tarifa:** hoje usamos R$ 1,09/kWh (valor de referência da equipe). Abra a página de tarifas da ANEEL e confira a tarifa B1 residencial (TE + TUSD).
   Uma conta de luz real (total ÷ kWh) é a melhor checagem. Ajuste `tarifa_kwh` se necessário.
 - [ ] **Faixas de ICMS em SP** para consumo residencial: usamos 12% como aproximação.
 - [ ] **Lei 15.235/2025:** confirme a gratuidade de 80 kWh e os critérios no site do Planalto ou da ANEEL.

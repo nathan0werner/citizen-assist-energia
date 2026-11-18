@@ -67,7 +67,7 @@ class TestAlternativas(unittest.TestCase):
     def test_valores_cenario_base(self):
         self.assertAlmostEqual(self.res["A1"].kwh_chuveiro_mes, 43.5)
         self.assertAlmostEqual(self.res["A2"].kwh_chuveiro_mes, 26.4)
-        self.assertAlmostEqual(self.res["A1"].economia_r_mes, 44.5 * 0.95)
+        self.assertAlmostEqual(self.res["A1"].economia_r_mes, 44.5 * 1.09)
 
     def test_pelo_menos_uma_renovavel(self):
         self.assertTrue(any(r.renovavel for r in self.res.values()))
