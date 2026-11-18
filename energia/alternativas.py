@@ -111,7 +111,8 @@ def comparar(perfil):
     conta_fv, compensada = c.conta_com_fv(perfil, ger, limite_kwh=kwh_ch)
     lim_fv = ["Na comparação só entra a energia do banho; o excedente de geração (%.0f kWh/mês) vira crédito "
               "para outros aparelhos e não foi contado na comparação." % max(0.0, ger - compensada),
-              "Preço do kit pesquisado pela equipe; confirmar se a instalação e a homologação estão incluídas.",
+              "Preço só dos equipamentos (anúncio): instalação e homologação por integrador são cobradas à parte, então o payback real é maior.",
+              "O kit exige rede 220 V e área de telhado para 4 módulos.",
               "Geração varia com a estação (menor no inverno) e com sombreamento.",
               "Regras de compensação (Lei 14.300/2022) mudam ano a ano: o Fio B cobrado sobe até 2029.",
               "O inversor costuma precisar de troca uma vez na vida útil (não incluído no saldo de 10 anos).",

@@ -91,10 +91,11 @@ tests/               testes automáticos
 |---|---:|---:|---:|---:|
 | A1 Hábitos (5 min + posição verão) | R$ 48,50 | R$ 0 | imediato | 20,6 kg |
 | A2 Aquecedor solar 300 L 🌱 | R$ 67,14 | R$ 5.624 (kit, sem instalação) | 8,0 anos | 28,5 kg |
-| A3 Kit fotovoltaico 2,48 kWp 🌱 | R$ 81,53 | R$ 4.159 (com instalação) | 4,7 anos | 40,7 kg |
+| A3 Kit fotovoltaico 2,48 kWp 🌱 | R$ 81,53 | R$ 4.159 (kit, sem instalação) | 4,7 anos | 40,7 kg |
 | A4 Hábitos + aquecedor solar 🌱 | R$ 81,70 | R$ 5.624 | 6,4 anos | 34,6 kg |
 
-Preços de anúncios pesquisados pela equipe em 18/11/2026 (`data/pesquisa_precos.csv`).
+Preços de anúncios pesquisados pela equipe em 18/11/2026 (`data/pesquisa_precos.csv`). Os dois preços são só dos
+equipamentos; a instalação é cobrada à parte e aumenta o payback real dos dois.
 
 **Recomendação:**
 1. Hábitos primeiro.

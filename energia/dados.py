@@ -80,10 +80,10 @@ P = {
     "potencia_modulo_kwp": Parametro(0.55, "kWp", "Potência de um módulo comercial", ("PESQUISA_PRECOS_EQUIPE",), True),
     "kit_fv_kwp": Parametro(2.48, "kWp", "Potência do menor kit fotovoltaico on-grid pesquisado (microinversor)",
                             ("ANUNCIO_FV_NEOSOLAR",), False),
-    "kit_fv_preco": Parametro(4159, "R$", "Preço do kit fotovoltaico 2,48 kWp com instalação, segundo a equipe",
+    "kit_fv_preco": Parametro(4159, "R$", "Preço do kit fotovoltaico 2,48 kWp (4 módulos + microinversores) – só equipamentos, sem instalação",
                               ("ANUNCIO_FV_NEOSOLAR",), False,
-                              "Anúncio Neosolar pesquisado pela equipe em 18/11/2026 (≈ R$ 1.677/kWp). "
-                              "Valor abaixo do usual para sistema instalado: confirmar se a instalação está mesmo incluída."),
+                              "Anúncio Neosolar pesquisado pela equipe em 18/11/2026 (≈ R$ 1.677/kWp). Instalação e homologação são "
+                              "feitas por integrador e cobradas à parte. O anúncio estima 260 kWh/mês (faixa 208–312)."),
     "fracao_fio_b_tarifa": Parametro(0.25, "fração", "Participação aproximada do Fio B na tarifa final",
                                      ("ANEEL_TARIFAS",), True),
     "percentual_fio_b_2026": Parametro(0.60, "fração", "Parcela do Fio B cobrada sobre energia compensada em 2026 (sistemas novos)",

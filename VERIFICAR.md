@@ -10,7 +10,7 @@ O enunciado exige que a equipe confira dados, cálculos e referências. Marque c
 - [ ] **Fator de emissão MCTI:** veja se já existe a média anual de 2024/2025 e atualize `fator_emissao_kg_kwh`.
 - [ ] **Irradiação em São Paulo:** consulte o CRESESB SunData com o CEP/coordenadas e confirme os ~4,6 kWh/m²/dia.
 - [x] **Preços:** 1 anúncio de cada equipamento registrado em `data/pesquisa_precos.csv` (18/11/2026).
-  - [ ] Confirmar se o kit FV da Neosolar (R$ 4.159) inclui mesmo a instalação.
+  - [x] Kit FV da Neosolar (R$ 4.159): confirmado pelo anúncio que é só equipamento (instalação à parte).
   - [ ] Se der tempo, acrescentar mais 2 anúncios de cada e usar a média.
 - [ ] **Potência verão/inverno:** confira na tabela do INMETRO ou na embalagem de um chuveiro comum.
 - [ ] **PROCEL PPH 2019:** confirme a participação do chuveiro no consumo residencial e cite o número exato.

@@ -237,9 +237,9 @@ def r_fv(perfil, res):
     txt = ("🔆 Placas fotovoltaicas (fonte renovável) geram eletricidade de dia; o que não é usado vai para a rede "
            "e volta como crédito na conta (Lei 14.300/2022).\n\n"
            f"• Só para o banho ({num(a0.kwh_chuveiro_mes)} kWh/mês) bastariam {d['modulos_so_banho']} placa(s) "
-           f"({num(d['kwp_so_banho'], 2)} kWp), mas o menor kit com instalação pesquisado tem {num(d['kwp'], 2)} kWp e gera "
+           f"({num(d['kwp_so_banho'], 2)} kWp), mas o menor kit pesquisado tem {num(d['kwp'], 2)} kWp e gera "
            f"≈ {num(d['geracao_kwh_mes'], 0)} kWh/mês. Na conta abaixo só entra a parte do banho.\n"
-           f"• Investimento ≈ {brl(a3.investimento)}; economia ≈ **{brl(a3.economia_r_mes)}/mês** "
+           f"• Investimento ≈ {brl(a3.investimento)} pelo kit (sem instalação); economia ≈ **{brl(a3.economia_r_mes)}/mês** "
            "(já descontando o Fio B que passa a ser cobrado).\n"
            f"• Payback simples: **{fmt_anos(a3.payback_anos)}**; saldo em 10 anos: {brl(a3.saldo_horizonte)}.\n"
            f"• Comparando: aquecedor solar custa {brl(a2.investimento)} e tem payback de {fmt_anos(a2.payback_anos)}.\n\n"
@@ -272,8 +272,8 @@ def r_comparar(perfil, res):
                            if perfil.tarifa_social else " porque se paga dentro da vida útil")
                         + "; além disso reduz o consumo no horário de pico (18h–21h), o que a placa FV não faz.")
         else:
-            just.append(f"• Com os preços pesquisados, o kit fotovoltaico ({brl(res['A3'].investimento)}) custa menos e se paga "
-                        f"mais rápido que o aquecedor solar ({brl(res['A2'].investimento)}, sem instalação). Mas exige telhado "
+            just.append(f"• Comparando só o preço dos kits (sem instalação nos dois), o fotovoltaico ({brl(res['A3'].investimento)}) "
+                        f"custa menos e se paga mais rápido que o aquecedor solar ({brl(res['A2'].investimento)}). Mas exige telhado "
                         "próprio sem sombra e não reduz o pico das 18h–21h, o que o aquecedor solar faz.")
     if "A2" not in ordem:
         just.append(f"• O aquecedor solar ficou de fora: com o seu consumo de água quente, ele levaria "
@@ -334,7 +334,7 @@ def r_limitacoes(perfil, res):
             "• Aquecedor solar: fração solar de 70% é média anual; inverno e dias nublados reduzem.\n"
             "• Fotovoltaico: geração média de São Paulo (CRESESB) e regras de 2026 da Lei 14.300; sombra, orientação "
             "do telhado e mudanças de regra alteram o resultado. Troca de inversor não foi incluída.\n"
-            "• Preços: 1 anúncio de cada equipamento pesquisado pela equipe (nov/2026); mudam com o tempo e a região.\n"
+            "• Preços: 1 anúncio de cada kit (nov/2026), só equipamentos; a instalação é cobrada à parte e aumenta o payback.\n"
             "• Aquecedor solar modelado com o kit de 300 L pesquisado, sem instalação; para 1–2 pessoas um kit menor pode compensar mais.\n"
             "• Payback é simples (sem juros, inflação ou reajustes de tarifa).\n"
             "• Tarifa Social combinada com placa FV não foi modelada.\n"
