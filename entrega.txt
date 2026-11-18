@@ -2,9 +2,8 @@ GLOBAL SOLUTION 2026.2 - CITIZEN ASSIST AI
 Soluções em Energias Renováveis e Sustentáveis - Turma 1CC__
 
 Integrantes:
-NOME COMPLETO 1 - RM00000
-NOME COMPLETO 2 - RM00000
-NOME COMPLETO 3 - RM00000
+Gabriel Villas - RM571603
+Nathan Werner - RM572925
 
-Repositório GitHub: https://github.com/USUARIO/citizen-assist-energia
+Repositório GitHub: https://github.com/nathan0werner/citizen-assist-energia
 Vídeo YouTube (não listado): https://youtu.be/XXXXXXXXXXX

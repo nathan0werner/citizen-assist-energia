@@ -11,9 +11,8 @@ do Citizen Assist AI.
 
 | Nome completo | RM |
 |---|---|
-| _NOME 1_ | _RM00000_ |
-| _NOME 2_ | _RM00000_ |
-| _NOME 3_ | _RM00000_ |
+| Gabriel Villas | RM571603 |
+| Nathan Werner | RM572925 |
 
 📺 **Vídeo (até 3 min):** _cole aqui o link não listado do YouTube_
 
