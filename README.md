@@ -11,8 +11,8 @@ do Citizen Assist AI.
 
 | Nome completo | RM |
 |---|---|
-| Gabriel Villas | RM571603 |
-| Nathan Werner | RM572925 |
+| Gabriel Villas Bôas da Silva Viana | RM571603 |
+| Nathan Guilherme Werner | RM572925 |
 
 📺 **Vídeo (até 3 min):** _cole aqui o link não listado do YouTube_
 
