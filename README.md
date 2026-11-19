@@ -14,7 +14,7 @@ do Citizen Assist AI.
 | Gabriel Villas Bôas da Silva Viana | RM571603 |
 | Nathan Guilherme Werner | RM572925 |
 
-📺 **Vídeo (até 3 min):** _cole aqui o link não listado do YouTube_
+📺 **Vídeo (até 3 min):** https://youtu.be/OfSdKjQSVlk
 
 ---
 
