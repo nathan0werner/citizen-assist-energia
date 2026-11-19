@@ -1,16 +1,36 @@
-# Roteiro do vídeo técnico (máx. 3:00, YouTube não listado)
+# Roteiro do vídeo técnico (3:00, YouTube não listado)
 
-**Dica:** grave a tela com o OBS (ou com o Win+G do Windows), com a voz de um integrante. Deixe o
-`python app_web.py` aberto e as perguntas copiadas antes de começar. Ensaie com cronômetro.
+Narração sincronizada com o arquivo `video_sem_som.mp4` (gravação automática da tela). Os tempos abaixo são os
+momentos em que cada cena aparece no vídeo. Fale num ritmo tranquilo: cada trecho cabe no tempo indicado.
 
-| Tempo | Tela | Fala (sugestão) |
+| Tempo | O que aparece na tela | O que falar |
 |---|---|---|
-| 0:00–0:20 | Título + README | "Somos o grupo ___. Na disciplina de Energias Renováveis, o Citizen Assist AI ganhou um módulo para famílias de baixa renda da Grande SP que usam chuveiro elétrico, um dos maiores gastos da conta e o principal responsável pelo pico das 18 às 21h." |
-| 0:20–0:55 | `docs/analise_energetica.md`, seção 3 | "Para uma família de 4 pessoas com banho de 8 minutos e chuveiro de 5.500 watts, a energia é potência vezes tempo: 5,5 kW vezes 16 horas, ou seja, 88 kWh por mês, cerca de 40% da conta. Os dados vêm do INMETRO, da ANEEL, do CRESESB e do MCTI. O que é estimativa está marcado no arquivo parametros.csv." |
-| 0:55–1:35 | Tabela de resultados | "Comparamos para a mesma necessidade e o mesmo período: hábitos, aquecedor solar e placas fotovoltaicas. Com tarifa de R$ 1,09 por kWh, os hábitos economizam R$ 48 por mês sem custo. Pesquisamos preços reais: o kit fotovoltaico de 2,48 kWp custa R$ 4.159 e se paga em 4,7 anos, mas não reduz o pico noturno. O aquecedor solar de 300 litros custa R$ 5.624 e se paga em 8 anos, mas tira o chuveiro do horário de pico. Numa casa de 2 pessoas, só os hábitos compensam. Como a rede brasileira é limpa, o CO₂ evitado é modesto; o ganho maior é aliviar o pico." |
-| 1:35–2:30 | **Demo** no navegador | Digite: "somos 3 pessoas, banho de 10 minutos, chuveiro 6800 W, conta de R$ 150 com 160 kWh" → "compare as alternativas" → "tenho tarifa social" → "limitações". Fala: "O assistente usa os dados da família e as mesmas funções da análise. A recomendação muda: com Tarifa Social, os primeiros 80 kWh são grátis e a placa fotovoltaica vai para o fim. Toda resposta mostra fontes e avisa que é estimativa." |
-| 2:30–2:55 | `testes_usuarios/registro_ajustes.md` | "Testamos com 3 pessoas por mensagem. Todas entenderam os números e as dicas, com nota média de clareza 5. Mas, na primeira versão, ninguém percebeu que a economia é uma estimativa. Deixamos o aviso em destaque e, no reteste, a pessoa acertou. Uma participante que trabalha com energia solar lembrou que, com bateria, a placa ajuda à noite; corrigimos o texto." |
-| 2:55–3:00 | README | "Recomendação: comece pelos hábitos; para investir, o assistente compara placa e aquecedor solar para a sua casa. Obrigado!" |
+| **0:00–0:05** | Abertura com o título | "Olá! Somos Gabriel e Nathan, da turma 1CCPK. Este é o módulo de energia do Citizen Assist AI." |
+| **0:05–0:20** | README: público e problema (destacado) | "Nosso público são famílias de baixa renda da Grande São Paulo que usam chuveiro elétrico. Ele é um dos maiores gastos da conta e é usado no horário de pico, das 18 às 21 horas." |
+| **0:20–0:38** | Análise: tabela de fórmulas | "Aplicamos os conceitos da disciplina. Energia é potência vezes tempo: um chuveiro de 5,5 quilowatts ligado 16 horas por mês gasta 88 quilowatts-hora, cerca de 40% da conta. Também calculamos o aquecimento da água, a geração solar e o payback." |
+| **0:38–0:55** | Análise: tabela de dados e premissas | "Cada dado tem origem indicada: ANEEL, INMETRO, CRESESB e MCTI. O que é estimativa está marcado como estimado. Os preços dos equipamentos vieram de anúncios reais que pesquisamos." |
+| **0:55–1:18** | Tabela de resultados (família de 4 pessoas) | "Comparamos as alternativas para a mesma necessidade e o mesmo período. Mudar hábitos economiza 48 reais por mês sem custo. A placa solar custa 4.159 reais e se paga em 4,7 anos. O aquecedor solar custa 5.624 e se paga em 8 anos, mas é o que mais alivia o horário de pico." |
+| **1:18–1:35** | Caso real: casa de 2 pessoas | "Também testamos a casa de um integrante, com 2 pessoas e chuveiro fraco. Ali, nenhum equipamento se paga bem, e o melhor é só mudar hábitos. Por isso o assistente calcula para cada família." |
+| **1:35–1:50** | Demonstração: digitando os dados no chat | "Agora a demonstração. O usuário informa quantas pessoas moram na casa, o tempo de banho, a potência do chuveiro e o valor da conta. O assistente calcula a tarifa real a partir da conta." |
+| **1:50–2:11** | Demonstração: comparação e recomendação | "Ao pedir a comparação, ele mostra a economia, o investimento e o tempo de retorno de cada opção, e recomenda uma ordem: primeiro hábitos, depois a fonte renovável que faz mais sentido, sempre com as fontes." |
+| **2:11–2:22** | Demonstração: "tenho tarifa social" | "Se a família tem Tarifa Social, os primeiros 80 quilowatts-hora já são grátis. O assistente refaz as contas e muda a recomendação." |
+| **2:22–2:30** | Demonstração: limitações | "E ele sempre mostra as limitações: são estimativas, não garantias." |
+| **2:30–2:55** | Testes com usuários e ajustes | "Testamos com 3 pessoas. Todas entenderam os números, com nota média 5 de clareza. Mas, na primeira versão, ninguém percebeu que a economia era uma estimativa. Deixamos o aviso em destaque e, no reteste, a pessoa acertou. Também corrigimos o texto sobre placas com bateria, por sugestão de uma participante." |
+| **2:55–3:00** | Tela final: recomendação | "Recomendação: comece pelos hábitos. Obrigado!" |
 
-> Se os números mudarem (por exemplo, depois de corrigir um parâmetro), rode `python scripts/gerar_analise.py`
-> e atualize as falas.
+## Como gravar a voz por cima
+
+**Opção mais fácil (Windows):**
+1. Abra o `video_sem_som.mp4` no player de vídeo, em tela cheia.
+2. Aperte **Windows + Alt + M** para ligar o microfone e **Windows + Alt + R** para começar a gravar.
+3. Dê play e leia a narração seguindo os tempos da tabela.
+4. Aperte **Windows + Alt + R** para parar. O vídeo com a voz fica em **Vídeos → Capturas**.
+
+**Opção com editor (Clipchamp, que já vem no Windows 11, ou CapCut):**
+1. Importe o `video_sem_som.mp4`.
+2. Grave a narração no próprio editor (ou no celular) e coloque o áudio na linha do tempo, embaixo do vídeo.
+3. Exporte em 1080p ou 720p.
+
+Depois suba no YouTube como **"Não listado"** e mande o link para colocar no README e no `entrega.txt`.
+
+> Se os números mudarem, rode `python scripts/gerar_analise.py` e atualize as falas.
