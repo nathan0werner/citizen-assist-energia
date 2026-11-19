@@ -126,6 +126,11 @@ class TestAssistente(unittest.TestCase):
         r = AssistenteEnergia().responder("vale a pena placa solar?")
         self.assertLess(r.index("telhado próprio"), r.index("Investimento"))
 
+    def test_placa_solar_explica_bateria(self):
+        # ajuste após teste com P2: deixar claro que a limitação do pico vale para kit sem bateria
+        r = AssistenteEnergia().responder("vale a pena placa solar?")
+        self.assertIn("sem bateria", r)
+
     def test_reiniciar(self):
         bot = AssistenteEnergia()
         bot.responder("somos 2 pessoas")

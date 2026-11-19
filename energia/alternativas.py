@@ -116,7 +116,8 @@ def comparar(perfil):
               "Geração varia com a estação (menor no inverno) e com sombreamento.",
               "Regras de compensação (Lei 14.300/2022) mudam ano a ano: o Fio B cobrado sobe até 2029.",
               "O inversor costuma precisar de troca uma vez na vida útil (não incluído no saldo de 10 anos).",
-              "Não reduz o pico das 18h–21h: gera de dia, enquanto o banho é à noite."]
+              "Este kit é on-grid, sem bateria: não reduz o pico das 18h–21h, porque gera de dia e o banho é à noite. "
+              "Sistemas com bateria (híbridos) guardam a energia para a noite, mas custam bem mais e não foram modelados."]
     viab = ("Média: exige telhado próprio, sem sombra, e homologação na distribuidora. "
             "O kit gera mais do que o banho precisa, então compensa mais quando o consumo total da casa é alto.")
     if perfil.tarifa_social:

@@ -127,8 +127,9 @@ Tabela completa, cenário com Tarifa Social e sensibilidade: [`resultados_gerado
   e essa cobrança sobe até 2029.
 - **Viabilidade:** exige telhado próprio, projeto e homologação na distribuidora. O inversor costuma precisar de
   troca durante a vida útil.
-- **Ambiente:** evita mais kWh da rede no ano, mas **não reduz o pico noturno**. Os módulos exigem descarte
-  adequado.
+- **Ambiente:** evita mais kWh da rede no ano, mas, **sem bateria, não reduz o pico noturno**. Sistemas com
+  bateria (híbridos) guardam a energia do dia para a noite, mas custam bem mais e não foram modelados (apontado no
+  teste com o participante P2). Os módulos e baterias exigem descarte adequado.
 
 ### Por que o ganho de CO₂ é pequeno?
 A matriz elétrica brasileira é majoritariamente renovável (38,5 g de CO₂/kWh em 2023, segundo o MCTI). Por isso o
@@ -142,7 +143,7 @@ evitado. Deixamos isso explícito para não exagerar o impacto.
 1. **Comece sempre pelos hábitos (A1):** economia imediata de ~R$ 48/mês sem gastar nada.
 2. **Fonte renovável, com os preços pesquisados: kit fotovoltaico (A3)** para a família de referência:
    - menor investimento (R$ 4.159) e menor payback (4,7 anos) entre as renováveis;
-   - exige telhado próprio sem sombra e **não reduz o pico noturno**.
+   - exige telhado próprio sem sombra e, **sem bateria, não reduz o pico noturno**.
 3. **Aquecedor solar (A2):** payback de 8,0 anos (6,4 anos junto com os hábitos), só pelo kit, sem instalação.
    Continua sendo a melhor opção para **aliviar o pico das 18h–21h** e para **famílias com Tarifa Social**: com os
    primeiros 80 kWh grátis, o ganho real do FV é pequeno.
@@ -194,6 +195,7 @@ Por isso o assistente **recalcula com os dados de cada família** em vez de dar 
 - Fração solar e geração FV são médias anuais. O inverno e o sombreamento reduzem os valores.
 - Os preços vêm de 1 anúncio de cada equipamento (nov/2026). O aquecedor solar não inclui instalação, e a instalação
   também não está no kit FV (o anúncio indica contratar um integrador). Preços variam por região e com o tempo.
+- Sistemas fotovoltaicos com bateria não foram modelados (só o kit on-grid pesquisado).
 - A combinação Tarifa Social + compensação FV não foi modelada; a economia do FV nesse caso está superestimada.
 - A potência na posição verão (58% da de inverno) é uma aproximação; varia por modelo.
 - O aquecedor solar foi modelado só com o kit de 300 L pesquisado. Para casas com 1 ou 2 pessoas, um kit menor e mais barato

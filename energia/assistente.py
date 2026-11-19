@@ -199,7 +199,8 @@ def r_habitos(perfil, res):
            f"2. Use a posição **verão** nos meses quentes (out–mar): a potência cai de ≈{num(perfil.potencia_inverno_w, 0)} W "
            f"para ≈{num(perfil.potencia_verao_w, 0)} W.\n"
            "3. Evite banhos entre 18h e 21h quando possível: é o horário de pico da rede.\n"
-           "4. Não 'gambiarre' a resistência e troque-a só pela original: emendas aumentam perdas e risco de choque.\n\n"
+           "4. Não 'gambiarre' a resistência e troque-a só pela original: emendas aumentam perdas e risco de choque.\n"
+           "5. Fora do banho: ao sair de casa, tire da tomada aparelhos em stand-by (TV, micro-ondas, carregadores).\n\n"
            f"📉 Para sua casa, isso reduz o banho de {num(a0.kwh_chuveiro_mes)} para {num(a1.kwh_chuveiro_mes)} kWh/mês: "
            f"economia de ≈ **{num(a1.economia_kwh_mes)} kWh** e ≈ **{brl(a1.economia_r_mes)} por mês** "
            f"({brl(a1.economia_r_mes * 12)} por ano), sem gastar nada.")
@@ -274,11 +275,11 @@ def r_comparar(perfil, res):
             just.append("• O aquecedor solar vem antes"
                         + (" porque, com a Tarifa Social, os primeiros 80 kWh já são grátis e a placa FV tem pouco ganho real"
                            if perfil.tarifa_social else " porque se paga dentro da vida útil")
-                        + "; além disso reduz o consumo no horário de pico (18h–21h), o que a placa FV não faz.")
+                        + "; além disso reduz o consumo no horário de pico (18h–21h), o que a placa FV sem bateria não faz.")
         else:
             just.append(f"• Comparando só o preço dos kits (sem instalação nos dois), o fotovoltaico ({brl(res['A3'].investimento)}) "
                         f"custa menos e se paga mais rápido que o aquecedor solar ({brl(res['A2'].investimento)}). Mas exige telhado "
-                        "próprio sem sombra e não reduz o pico das 18h–21h, o que o aquecedor solar faz.")
+                        "próprio sem sombra e, sem bateria, não reduz o pico das 18h–21h, o que o aquecedor solar faz.")
     if "A2" not in ordem:
         just.append(f"• O aquecedor solar ficou de fora: com o seu consumo de água quente, ele levaria "
                     f"{fmt_anos(res['A2'].payback_anos)} para se pagar, mais do que a vida útil "
@@ -341,7 +342,7 @@ def r_limitacoes(perfil, res):
             "• Preços: 1 anúncio de cada kit (nov/2026), só equipamentos; a instalação é cobrada à parte e aumenta o payback.\n"
             "• Aquecedor solar modelado com o kit de 300 L pesquisado, sem instalação; para 1–2 pessoas um kit menor pode compensar mais.\n"
             "• Payback é simples (sem juros, inflação ou reajustes de tarifa).\n"
-            "• Tarifa Social combinada com placa FV não foi modelada.\n"
+            "• Tarifa Social combinada com placa FV não foi modelada, nem placa FV com bateria.\n"
             "• Antes de comprar, peça orçamento a instaladores e confira com a distribuidora. "
             "Instalações elétricas devem ser feitas por profissional (NBR 5410).")
 

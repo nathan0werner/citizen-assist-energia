@@ -100,7 +100,7 @@ equipamentos; a instalação é cobrada à parte e aumenta o payback real dos do
 **Recomendação:**
 1. Hábitos primeiro.
 2. Com os preços pesquisados, o kit fotovoltaico é a fonte renovável que se paga mais rápido. Exige telhado próprio
-   e não reduz o pico das 18h–21h.
+   e, sem bateria, não reduz o pico das 18h–21h.
 3. Aquecedor solar para aliviar o pico e para famílias com Tarifa Social, em que os primeiros 80 kWh já são grátis
    e o FV rende pouco.
 4. Em casas pequenas (cenário com 2 pessoas), só os hábitos compensam financeiramente.
