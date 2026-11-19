@@ -22,7 +22,7 @@ Verificar se o público entende as orientações de energia e as acha úteis, e 
 
 ### Alternativa: teste por mensagem (sem rodar o programa)
 Se não der para a pessoa usar o assistente na hora, mande pelo WhatsApp as **respostas reais** do assistente
-(geradas pelo próprio código) e as perguntas de compreensão. Registre na ficha que o teste foi "por mensagem". Esse
+(geradas pelo próprio código) e as perguntas de compreensão — texto pronto em [questionario_whatsapp.md](questionario_whatsapp.md). Registre na ficha que o teste foi "por mensagem". Esse
 formato avalia se as orientações são **compreensíveis**, mas não avalia a navegação no chat; deixe isso claro no
 registro.
 
