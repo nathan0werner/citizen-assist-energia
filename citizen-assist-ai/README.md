@@ -9,7 +9,7 @@ Assistente de terminal, feito em Python, que orienta **pessoas idosas (60 anos o
 | Nome | RM |
 |------|----|
 | Gabriel Villas | 571603 |
-| Nathan Werner | PREENCHER |
+| Nathan Werner | 572925 |
 
 ## Público e problema
 
