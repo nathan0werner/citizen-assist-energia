@@ -1,0 +1,275 @@
+[
+    {
+        "id": 1,
+        "categoria": "Saúde",
+        "titulo": "Fazer o Cartão Nacional de Saúde (Cartão SUS)",
+        "palavras_chave": [
+            "cartao sus",
+            "cartao do sus",
+            "sus",
+            "cns",
+            "cartao nacional de saude"
+        ],
+        "resposta": "O Cartão SUS é gratuito. Pode ser feito em qualquer Unidade Básica de Saúde (UBS), o posto de saúde, ou visto no aplicativo Meu SUS Digital. Desde 2025, o Ministério da Saúde usa o CPF como número de identificação no SUS, então ter o CPF regularizado é essencial.",
+        "documentos": [
+            "Documento com foto",
+            "CPF",
+            "Comprovante de residência"
+        ],
+        "onde": "Qualquer UBS (posto de saúde) ou aplicativo Meu SUS Digital",
+        "fonte": "https://www.gov.br/saude/pt-br/acesso-a-informacao/acoes-e-programas/cartao-nacional-de-saude",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 2,
+        "categoria": "Saúde",
+        "titulo": "Tomar as vacinas indicadas para pessoas idosas",
+        "palavras_chave": [
+            "vacina",
+            "vacinas",
+            "vacinacao",
+            "vacina da gripe",
+            "influenza",
+            "covid"
+        ],
+        "resposta": "Pessoas com 60 anos ou mais fazem parte do grupo prioritário da vacina contra a gripe, aplicada nas campanhas de todo ano. Também é importante manter em dia a vacina contra a covid-19 e as outras indicadas na caderneta. As vacinas do SUS são gratuitas.",
+        "documentos": [
+            "Documento com foto",
+            "Cartão SUS ou CPF",
+            "Caderneta de vacinação (se tiver)"
+        ],
+        "onde": "Sala de vacina da UBS (posto de saúde) mais próxima",
+        "fonte": "https://www.gov.br/saude/pt-br/vacinacao",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 3,
+        "categoria": "Saúde",
+        "titulo": "Pegar remédios de graça na Farmácia Popular",
+        "palavras_chave": [
+            "farmacia popular",
+            "remedio",
+            "remedios",
+            "medicamento",
+            "medicamentos",
+            "remedio de pressao",
+            "diabetes",
+            "fralda geriatrica"
+        ],
+        "resposta": "Desde fevereiro de 2025, todos os itens do programa Farmácia Popular são gratuitos. Entre eles estão remédios para pressão alta, diabetes, asma, colesterol, osteoporose, Parkinson e glaucoma, além de fraldas geriátricas. É preciso ir a uma farmácia credenciada levando a receita dentro da validade, que pode ser do SUS ou de médico particular.",
+        "documentos": [
+            "Receita médica dentro da validade",
+            "Documento com foto",
+            "CPF"
+        ],
+        "onde": "Farmácias credenciadas com a marca do programa Farmácia Popular",
+        "fonte": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 4,
+        "categoria": "Saúde",
+        "titulo": "Marcar consulta médica no SUS",
+        "palavras_chave": [
+            "consulta",
+            "marcar consulta",
+            "medico",
+            "posto de saude",
+            "ubs",
+            "especialista"
+        ],
+        "resposta": "A primeira consulta é marcada na UBS (posto de saúde) mais perto da sua casa. Se precisar de um especialista, o médico da UBS faz o encaminhamento e a própria unidade agenda a consulta.",
+        "documentos": [
+            "Documento com foto",
+            "Cartão SUS ou CPF",
+            "Comprovante de residência"
+        ],
+        "onde": "UBS (posto de saúde) do seu bairro",
+        "fonte": "https://www.gov.br/saude/pt-br/composicao/saps",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 5,
+        "categoria": "Saúde",
+        "titulo": "Usar o aplicativo Meu SUS Digital",
+        "palavras_chave": [
+            "meu sus digital",
+            "aplicativo",
+            "app",
+            "aplicativo do sus",
+            "app do sus",
+            "carteira de vacinacao digital",
+            "resultado de exame"
+        ],
+        "resposta": "No aplicativo Meu SUS Digital você vê suas vacinas, exames, remédios retirados e o seu Cartão SUS. Para entrar, use a sua conta gov.br. O aplicativo é gratuito para celulares Android e iPhone.",
+        "documentos": [
+            "CPF",
+            "Conta gov.br",
+            "Celular com internet"
+        ],
+        "onde": "Aplicativo Meu SUS Digital (loja de aplicativos do celular)",
+        "fonte": "https://meususdigital.saude.gov.br",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 6,
+        "categoria": "Saúde",
+        "titulo": "Chamar socorro em emergência (SAMU 192)",
+        "palavras_chave": [
+            "samu",
+            "192",
+            "emergencia",
+            "ambulancia",
+            "socorro",
+            "passando mal"
+        ],
+        "resposta": "Em caso de emergência médica, ligue 192 para o SAMU. A ligação é gratuita e funciona 24 horas, inclusive de celular sem crédito. Diga o endereço completo e o que está acontecendo.",
+        "documentos": [
+            "Nenhum documento é necessário para chamar o SAMU"
+        ],
+        "onde": "Telefone 192, de qualquer telefone",
+        "fonte": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 7,
+        "categoria": "Transporte",
+        "titulo": "Andar de graça no ônibus da cidade",
+        "palavras_chave": [
+            "onibus",
+            "onibus de graca",
+            "passe livre",
+            "transporte gratuito",
+            "gratuidade",
+            "metro"
+        ],
+        "resposta": "Pelo Estatuto da Pessoa Idosa, quem tem 65 anos ou mais não paga o transporte coletivo urbano. Basta mostrar um documento com foto. Muitas cidades estendem esse direito para quem tem entre 60 e 64 anos, e algumas pedem um cartão próprio: consulte a prefeitura.",
+        "documentos": [
+            "Documento com foto que mostre a idade"
+        ],
+        "onde": "No próprio ônibus; para o cartão do idoso, na prefeitura ou empresa de transporte da cidade",
+        "fonte": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 8,
+        "categoria": "Transporte",
+        "titulo": "Viajar de ônibus para outro estado de graça ou com desconto",
+        "palavras_chave": [
+            "viagem",
+            "viajar",
+            "interestadual",
+            "passagem",
+            "passagem gratuita",
+            "rodoviaria"
+        ],
+        "resposta": "Em ônibus entre estados, cada viagem reserva 2 vagas gratuitas para pessoas com 60 anos ou mais e renda de até 2 salários mínimos. Se essas vagas acabarem, a pessoa tem pelo menos 50% de desconto na passagem. Peça o bilhete na bilheteria com antecedência.",
+        "documentos": [
+            "Documento com foto",
+            "Comprovante de renda de até 2 salários mínimos"
+        ],
+        "onde": "Bilheteria da empresa de ônibus ou rodoviária",
+        "fonte": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 9,
+        "categoria": "Transporte",
+        "titulo": "Tirar a credencial de estacionamento para idoso",
+        "palavras_chave": [
+            "estacionamento",
+            "vaga de idoso",
+            "credencial",
+            "cartao de estacionamento",
+            "vaga especial"
+        ],
+        "resposta": "Pessoas com 60 anos ou mais podem usar as vagas reservadas para idosos, que são 5% das vagas nos estacionamentos. Para isso, é preciso tirar a credencial no órgão de trânsito da sua cidade e deixá-la visível no carro. A credencial vale em todo o Brasil. Em muitas cidades ela é gratuita e pode ser pedida pela internet.",
+        "documentos": [
+            "Documento com foto",
+            "Comprovante de residência"
+        ],
+        "onde": "Órgão de trânsito da prefeitura (muitas cidades permitem pedir pela internet)",
+        "fonte": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 10,
+        "categoria": "Direitos",
+        "titulo": "Pedir o Benefício de Prestação Continuada (BPC/LOAS)",
+        "palavras_chave": [
+            "bpc",
+            "loas",
+            "beneficio",
+            "beneficio do idoso",
+            "salario do idoso",
+            "nunca contribuiu"
+        ],
+        "resposta": "O BPC paga um salário mínimo por mês a pessoas com 65 anos ou mais com renda familiar de até 1/4 do salário mínimo por pessoa. Não é preciso ter contribuído para o INSS, mas a família precisa estar inscrita no CadÚnico, com o cadastro atualizado nos últimos 2 anos. O pedido é feito pelo Meu INSS ou pelo telefone 135.",
+        "documentos": [
+            "Documento com foto",
+            "CPF de todos da família",
+            "Inscrição no CadÚnico atualizada nos últimos 2 anos"
+        ],
+        "onde": "Aplicativo ou site Meu INSS, telefone 135; CadÚnico no CRAS da cidade",
+        "fonte": "https://www.gov.br/inss/pt-br/direitos-e-deveres/beneficios-assistenciais/beneficio-assistencial-a-pessoa-idosa-bpc-loas",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 11,
+        "categoria": "Direitos",
+        "titulo": "Fazer a prova de vida do INSS",
+        "palavras_chave": [
+            "prova de vida",
+            "inss",
+            "aposentado",
+            "aposentadoria",
+            "bloqueio do beneficio"
+        ],
+        "resposta": "A prova de vida do INSS é feita automaticamente, pelo cruzamento de dados (como vacina, consulta no SUS, votação ou acesso ao Meu INSS). Na maioria dos casos o aposentado não precisa ir ao banco. Se o INSS não encontrar nenhum registro, ele avisa pelo Meu INSS. O INSS não liga nem manda ninguém à sua casa pedindo dados para a prova de vida: isso é golpe.",
+        "documentos": [
+            "Conta gov.br para acompanhar no Meu INSS"
+        ],
+        "onde": "Aplicativo ou site Meu INSS, ou telefone 135",
+        "fonte": "https://www.gov.br/inss/pt-br/noticias/prova-de-vida-do-inss-e-feita-por-cruzamento-de-dados",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 12,
+        "categoria": "Direitos",
+        "titulo": "Ter atendimento prioritário",
+        "palavras_chave": [
+            "prioridade",
+            "atendimento prioritario",
+            "fila",
+            "preferencial",
+            "caixa preferencial"
+        ],
+        "resposta": "Pessoas com 60 anos ou mais têm atendimento prioritário em órgãos públicos, bancos e comércio. Quem tem 80 anos ou mais tem prioridade especial, na frente dos demais idosos. Para usar o direito, basta mostrar um documento com foto.",
+        "documentos": [
+            "Documento com foto que mostre a idade"
+        ],
+        "onde": "Qualquer órgão público, banco, comércio ou serviço de saúde",
+        "fonte": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.741.htm",
+        "verificado_em": "2026-11-18"
+    },
+    {
+        "id": 13,
+        "categoria": "Direitos",
+        "titulo": "Denunciar violência ou abandono de pessoa idosa (Disque 100)",
+        "palavras_chave": [
+            "disque 100",
+            "denuncia",
+            "denunciar",
+            "violencia",
+            "maus tratos",
+            "abandono"
+        ],
+        "resposta": "Violência, abandono, maus-tratos ou golpes contra pessoas idosas podem ser denunciados pelo Disque 100. A ligação é gratuita, funciona 24 horas e a denúncia pode ser anônima. Em perigo imediato, ligue 190 para a Polícia Militar.",
+        "documentos": [
+            "Nenhum documento é necessário"
+        ],
+        "onde": "Telefone 100, WhatsApp ou site do Ministério dos Direitos Humanos",
+        "fonte": "https://www.gov.br/mdh/pt-br/ondh",
+        "verificado_em": "2026-11-18"
+    }
+]
