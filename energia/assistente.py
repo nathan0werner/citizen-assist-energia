@@ -15,8 +15,8 @@ from .alternativas import comparar, recomendar, fmt_anos
 from .dados import v
 from .referencias import formatar
 
-AVISO = ("⚠️ Valores aproximados, calculados com premissas da análise (tarifa, preços e clima médios). "
-         "Não são garantia de economia. Digite \"limitações\" para saber mais.")
+AVISO = ("⚠️ ATENÇÃO: é uma ESTIMATIVA, a economia NÃO é garantida. O valor real muda com a sua conta, "
+         "o seu chuveiro, os preços e o clima. Digite \"limitações\" para saber mais.")
 
 
 def _norm(t):
@@ -236,12 +236,16 @@ def r_fv(perfil, res):
     d = a3.detalhes
     txt = ("🔆 Placas fotovoltaicas (fonte renovável) geram eletricidade de dia; o que não é usado vai para a rede "
            "e volta como crédito na conta (Lei 14.300/2022).\n\n"
+           "✋ Antes de decidir, só vale se você tiver:\n"
+           "  ✔ telhado próprio, com sol e sem sombra;\n"
+           "  ✔ dinheiro para a instalação, que é cobrada à parte e aumenta o tempo de retorno;\n"
+           "  ✔ rede 220 V em casa e autorização da companhia de energia.\n\n"
            f"• Só para o banho ({num(a0.kwh_chuveiro_mes)} kWh/mês) bastariam {d['modulos_so_banho']} placa(s) "
            f"({num(d['kwp_so_banho'], 2)} kWp), mas o menor kit pesquisado tem {num(d['kwp'], 2)} kWp e gera "
            f"≈ {num(d['geracao_kwh_mes'], 0)} kWh/mês. Na conta abaixo só entra a parte do banho.\n"
            f"• Investimento ≈ {brl(a3.investimento)} pelo kit (sem instalação); economia ≈ **{brl(a3.economia_r_mes)}/mês** "
            "(já descontando o Fio B que passa a ser cobrado).\n"
-           f"• Payback simples: **{fmt_anos(a3.payback_anos)}**; saldo em 10 anos: {brl(a3.saldo_horizonte)}.\n"
+           f"• Tempo para o dinheiro voltar (payback): **{fmt_anos(a3.payback_anos)}**, sem contar a instalação; saldo em 10 anos: {brl(a3.saldo_horizonte)}.\n"
            f"• Comparando: aquecedor solar custa {brl(a2.investimento)} e tem payback de {fmt_anos(a2.payback_anos)}.\n\n"
            f"🏠 Viabilidade: {a3.viabilidade}\n"
            "⚠️ Limitações: " + " ".join(a3.limitacoes))

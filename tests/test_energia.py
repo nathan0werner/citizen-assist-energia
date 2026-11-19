@@ -114,12 +114,17 @@ class TestAssistente(unittest.TestCase):
     def test_resposta_tem_fontes_e_aviso(self):
         r = AssistenteEnergia().responder("compare as alternativas")
         self.assertIn("Fontes", r)
-        self.assertIn("Não são garantia", r)
+        self.assertIn("NÃO é garantida", r)
 
     def test_resposta_usa_numeros_da_analise(self):
         bot = AssistenteEnergia()
         esperado = comparar(bot.perfil)["A1"].economia_r_mes
         self.assertIn(f"{esperado:.2f}".replace(".", ","), bot.responder("dicas para economizar no banho"))
+
+    def test_placa_solar_mostra_condicoes_antes_dos_numeros(self):
+        # ajuste após teste com P1: as condições ficavam escondidas no fim da resposta
+        r = AssistenteEnergia().responder("vale a pena placa solar?")
+        self.assertLess(r.index("telhado próprio"), r.index("Investimento"))
 
     def test_reiniciar(self):
         bot = AssistenteEnergia()
